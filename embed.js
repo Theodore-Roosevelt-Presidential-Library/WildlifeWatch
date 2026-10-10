@@ -56,10 +56,23 @@
     var r = f.getBoundingClientRect();
     var vh = window.innerHeight || document.documentElement.clientHeight;
     var header = 0;
-    try { // keep clear of a sticky site header, if one covers the top of the window
-      var el = document.elementFromPoint(Math.max(1, r.left + 2), 2);
-      while (el && el !== document.body) { var cs = getComputedStyle(el); if (cs.position === "fixed" || cs.position === "sticky") { header = Math.max(header, el.getBoundingClientRect().bottom); break; } el = el.parentElement; }
-    } catch (x) {}
+    try { // keep clear of fixed/sticky bars stacked at the top of the window
+      // (e.g. an admin toolbar plus the site header): probe downward until clear.
+      var x = Math.min(Math.max(1, r.left + r.width / 2), (window.innerWidth || 1000) - 2);
+      for (var pass = 0; pass < 6; pass++) {
+        var el = document.elementFromPoint(x, header + 2), hit = null;
+        while (el && el !== document.body && el !== document.documentElement) {
+          if (el === f) break;
+          var cs = getComputedStyle(el);
+          if ((cs.position === "fixed" || cs.position === "sticky") && cs.visibility !== "hidden") { hit = el; break; }
+          el = el.parentElement;
+        }
+        if (!hit) break;
+        var b = hit.getBoundingClientRect().bottom;
+        if (b <= header + 1) break;
+        header = b;
+      }
+    } catch (x2) {}
     header = Math.min(header, vh / 3);
     var top = Math.max(0, header - r.top);
     var bottom = Math.min(r.height, vh - r.top);
