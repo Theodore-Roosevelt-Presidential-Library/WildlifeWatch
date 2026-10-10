@@ -48,6 +48,8 @@ No T.R. quotations are used anywhere in the tool. A candidate line about elk app
 **Safety**
 - "Maintain at least 25 yards distance from all wildlife"; no wildlife calls or spotlights; pets stay in vehicles — NPS Wildlife Viewing. (Note: `theodore_roosevelt_national_park_guide.md` in the project files says 100 yards for bison and elk; the tool follows NPS.)
 
+- Thumb test (arm out, thumbs-up, one eye closed; if the thumb doesn't fully cover the animal you're too close) — [NPS, Florissant Fossil Beds: Watch the Wildlife](https://www.nps.gov/flfo/learn/kidsyouth/watch-the-wildlife.htm). Presented as a quick check alongside the 25-yard rule, not instead of it.
+
 **Time zones**
 - South Unit/Medora on Mountain Time; North Unit on Central — project files (`medora-knowledge-base.md`)
 

@@ -14,8 +14,11 @@ Guide to watching wildlife in Theodore Roosevelt National Park — a Theodore Ro
 | Plan Your Outing | Sunrise/sunset and best wildlife windows for any date (Mountain Time for the South Unit, Central for the North Unit), what's happening that month, best bets, a suggested route, and a calendar file for a dawn drive | computed in the browser |
 | Recent Reports | iNaturalist reports from the last ~45 days, rolled up to named areas, newest 2 days held back, no coordinates | `data/inat.json` |
 | Watch Safely | NPS 25-yard rule and viewing etiquette, plus a printable family checklist (`checklist.html`) | — |
+| Embed on Your Site | How-to for web editors and partners: copy-ready snippets with live previews, options, Drupal steps and deep links. Hidden when the tool itself is embedded. | — |
 
 ## Embedding on trlibrary.com
+
+Live example: https://www.trlibrary.com/visit/wildlife (node 820). The same instructions are on the tool's **Embed on Your Site** tab.
 
 Drop this into a Drupal Full HTML block. Each `div` becomes a self-sizing widget.
 

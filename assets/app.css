@@ -103,19 +103,34 @@ section.panel[hidden] { display: none; }
 .card.feature .ph { aspect-ratio: 16/9; }
 @media (max-width: 620px) { .card.feature { grid-column: span 1; } }
 
-/* ---- Detail drawer ---- */
+/* ---- Detail pop-up (centered dialog) ---- */
 .drawer { position: fixed; inset: 0; z-index: 2000; display: none; }
 .drawer.open { display: block; }
-.drawer .scrim { position: absolute; inset: 0; background: rgba(15,20,17,.55); }
-.drawer .sheet { position: absolute; right: 0; top: 0; bottom: 0; width: min(760px, 100%); background: var(--paper); overflow-y: auto; box-shadow: -10px 0 40px rgba(0,0,0,.25); }
-.drawer .close { position: sticky; top: 12px; float: right; margin: 12px 12px 0 0; z-index: 3; width: 42px; height: 42px; border-radius: 50%; border: 0; background: rgba(255,255,255,.95); font-size: 24px; line-height: 1; box-shadow: var(--shadow); }
-.drawer .big { aspect-ratio: 3/2; background: var(--sand) center/cover; }
+.drawer .scrim { position: absolute; inset: 0; background: rgba(15,20,17,.62); animation: wwFade .18s ease-out; }
+.drawer .stage { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding: 24px 16px; pointer-events: none; }
+.drawer .sheet { pointer-events: auto; position: relative; width: min(940px, 100%); max-height: 100%; overflow-y: auto; overscroll-behavior: contain; background: var(--paper); border-radius: 14px; box-shadow: 0 24px 70px rgba(0,0,0,.35); animation: wwPop .2s ease-out; }
+.drawer .bar { position: sticky; top: 0; z-index: 3; display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 10px 12px; pointer-events: none; height: 0; overflow: visible; }
+.drawer .bar > * { pointer-events: auto; }
+.drawer .nav { display: flex; gap: 6px; margin-top: 44px; }
+.drawer .close, .drawer .nav button { width: 40px; height: 40px; border-radius: 50%; border: 0; background: rgba(255,255,255,.95); font-size: 22px; line-height: 1; box-shadow: 0 2px 10px rgba(0,0,0,.2); color: var(--forest-dark); margin-top: 44px; }
+.drawer .nav button { margin-top: 0; font-size: 18px; }
+.drawer .close:hover, .drawer .nav button:hover { background: #fff; color: var(--orange-dark); }
+.drawer .big { aspect-ratio: 16/8; background: var(--sand) center/cover; border-radius: 14px 14px 0 0; }
 .drawer .thumbs { display: flex; gap: 6px; padding: 8px 24px 0; overflow-x: auto; }
 .drawer .thumbs button { flex: 0 0 76px; height: 56px; border: 2px solid transparent; border-radius: 6px; background: center/cover; padding: 0; }
 .drawer .thumbs button[aria-current="true"] { border-color: var(--orange); }
 .drawer .credit { font: 11px var(--ui); color: var(--muted); padding: 6px 24px 0; }
-.drawer .content { padding: 18px 24px 40px; }
-.drawer h2 { font-size: 64px; }
+.drawer .content { padding: 18px 28px 32px; }
+.drawer .counter { font: 12px var(--ui); color: var(--muted); }
+@keyframes wwFade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes wwPop { from { opacity: 0; transform: translateY(10px) scale(.98); } to { opacity: 1; transform: none; } }
+/* Embedded: the iframe is as tall as its content, so pin the dialog to the slice
+   of the iframe the reader can actually see (reported by embed.js). */
+body.embed .drawer .stage { position: absolute; inset: auto 0 auto 0; top: var(--vp-top, 0px); height: var(--vp-h, 100vh); }
+body.embed .drawer .scrim { position: absolute; }
+body.embed.single .drawer { position: absolute; }
+@media (max-width: 620px) { .drawer .stage { padding: 10px 8px; } .drawer .content { padding: 16px 18px 26px; } .drawer h2 { font-size: 48px !important; } }
+.drawer h2 { font-size: 60px; }
 .drawer .sci { font-style: italic; color: var(--muted); margin: 2px 0 12px; }
 .facts { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 20px 0; }
 .fact { background: #fff; border-radius: 8px; padding: 12px 14px; border: 1px solid var(--line); }
@@ -264,3 +279,25 @@ body.embed .wrap { padding: 0 4px; }
 .chart .bars div.na, .heat td.na { background: repeating-linear-gradient(45deg, #f1ede3, #f1ede3 4px, #e4dfd2 4px, #e4dfd2 8px); }
 .chart .bars div.na { opacity: .7; }
 .ms { font-family: "Material Symbols Rounded"; font-weight: 400; font-style: normal; font-size: 44px; line-height: 1; display: inline-block; font-variation-settings: "FILL" 1; color: var(--orange-dark); -webkit-font-smoothing: antialiased; }
+
+/* ---- Embed tab ---- */
+pre.code { background: var(--dark-gray); color: #f3efe7; border-radius: 8px; padding: 12px 14px; overflow-x: auto; font: 13px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace; margin: 8px 0 0; white-space: pre; }
+code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .88em; }
+.embed-list { display: grid; gap: 14px; margin-top: 14px; }
+.emb { background: #fff; border-radius: var(--radius); box-shadow: var(--shadow); padding: 16px 18px; display: grid; grid-template-columns: 120px 1fr; gap: 16px; align-items: start; }
+.emb .t { width: 120px; height: 90px; border-radius: 8px; background: center/cover; }
+.emb b.name { font: 700 26px/1 var(--display); text-transform: uppercase; color: var(--forest-dark); display: block; }
+.emb p { margin: 4px 0 8px; font-size: 16px; }
+.emb .row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.emb pre.code { margin-top: 10px; }
+.emb .preview { grid-column: 1 / -1; border: 1px dashed var(--sand); border-radius: 8px; padding: 8px; background: var(--paper); }
+.btn.ghost { background: #fff; color: var(--forest); border: 1px solid var(--forest); }
+.btn.ghost:hover { background: var(--sand-tint); color: var(--forest-dark); }
+.opt-table table { width: 100%; border-collapse: collapse; font: 15px var(--ui); }
+.opt-table th, .opt-table td { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.opt-table th { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+.link-list { font: 15px/1.9 var(--ui); padding-left: 18px; }
+body.embed .tab-embed { display: none; }
+@media (max-width: 620px) { .emb { grid-template-columns: 1fr; } .emb .t { width: 100%; height: 140px; } }
+.thumb-tip { display: flex; gap: 12px; align-items: flex-start; margin-top: 14px; background: var(--sand-tint); border-radius: 8px; padding: 12px 14px; font-size: 16px; line-height: 1.45; }
+.thumb-tip .ms { font-size: 30px; flex: 0 0 auto; }

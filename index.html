@@ -40,6 +40,7 @@
     <button role="tab" data-view="planner">Plan Your Outing</button>
     <button role="tab" data-view="reports">Recent Reports</button>
     <button role="tab" data-view="safety">Watch Safely</button>
+    <button role="tab" data-view="embed" class="tab-embed">Embed on Your Site</button>
   </div>
 </nav>
 
@@ -189,7 +190,7 @@
         <p class="small">The National Park Service asks everyone to stay at least 25 yards from all wildlife. For bison, more is better.</p>
       </div>
       <div class="rules">
-        <div class="rule"><div class="big"><span class="ms" aria-hidden="true">thumb_up</span></div><h4>The thumb test</h4><p>Hold out your arm and raise your thumb. If you can't cover the whole animal with it, you're too close.</p></div>
+        <div class="rule"><div class="big"><span class="ms" aria-hidden="true">thumb_up</span></div><h4>The thumb test</h4><p>Stretch out your arm, give a thumbs-up and close one eye. If your thumb hides the whole animal, you're far enough back. If you can still see it around your thumb, you're too close — back away.</p></div>
         <div class="rule"><div class="big"><span class="ms" aria-hidden="true">undo</span></div><h4>If it moves, you moved too close</h4><p>An animal that stops eating, stares or walks away is telling you to back off.</p></div>
         <div class="rule"><div class="big"><span class="ms" aria-hidden="true">directions_car</span></div><h4>Your car is a blind</h4><p>Bison and horses often walk right past cars. Stay inside, pull fully off the road and let them pass.</p></div>
         <div class="rule"><div class="big"><span class="ms" aria-hidden="true">volume_off</span></div><h4>No calls, no spotlights</h4><p>Wildlife calls and spotlighting are not allowed in the park. They stress animals and change their behavior.</p></div>
@@ -199,6 +200,66 @@
         <div class="rule"><div class="big"><span class="ms" aria-hidden="true">block</span></div><h4>Never feed wildlife</h4><p>Feeding, chasing or harassing animals is illegal and dangerous — for you and for them.</p></div>
       </div>
       <p style="margin-top:30px"><a class="btn" href="checklist.html">Print a family spotting checklist</a></p>
+    </div>
+  </section>
+
+  <!-- EMBED -->
+  <section class="panel" id="embed" data-panel="embed" hidden>
+    <div class="wrap">
+      <div class="panel-head">
+        <div>
+          <div class="eyebrow">For web editors and partners</div>
+          <h2>Embed on Your Site</h2>
+          <p class="lede">Every section of Wildlife Watch can drop into any web page — trlibrary.com, a partner's site, a blog. Paste two lines and the widget sizes itself, stays up to date, and keeps its own styling.</p>
+        </div>
+      </div>
+
+      <div class="two">
+        <div class="box">
+          <h3>How it works</h3>
+          <ol class="route" style="margin-top:14px">
+            <li><b>Add the script once per page.</b> It can go anywhere on the page, before or after the widgets.<pre class="code"><code id="code-script"></code></pre></li>
+            <li><b>Add a placeholder wherever a widget should appear.</b> Change the word in quotes to pick the widget. Use as many as you like on one page.<pre class="code"><code>&lt;div data-wildlife-watch="horses"&gt;&lt;/div&gt;</code></pre></li>
+            <li><b>Publish.</b> The widget loads, matches its height to its content, and refreshes its data daily on its own.</li>
+          </ol>
+        </div>
+        <div class="box">
+          <h3>On trlibrary.com (Drupal)</h3>
+          <ol class="route" style="margin-top:14px">
+            <li>In <b>Layout</b>, add a <b>Code (embed)</b> block where the widget should go.</li>
+            <li>Paste the full snippet for the widget (placeholder plus script) into the block's code field.</li>
+            <li>Turn <b>Display title</b> off — each widget carries its own heading — and check <b>Fit</b> so it spans the column.</li>
+            <li>Save the layout. If you add several widgets to one page, the script line can repeat safely.</li>
+          </ol>
+          <p class="small">Live example: <a href="https://www.trlibrary.com/visit/wildlife">trlibrary.com/visit/wildlife</a></p>
+        </div>
+      </div>
+
+      <h3 style="margin-top:44px">Choose a widget</h3>
+      <p class="small">Copy a ready-made snippet, or preview it right here.</p>
+      <div class="embed-list" id="embed-list"></div>
+
+      <h3 style="margin-top:44px">Options</h3>
+      <div class="box opt-table">
+        <table>
+          <thead><tr><th>Attribute</th><th>What it does</th><th>Example</th></tr></thead>
+          <tbody>
+            <tr><td><code>data-wildlife-watch</code></td><td>Which widget to show. Required.</td><td><code>"map"</code></td></tr>
+            <tr><td><code>data-species</code></td><td>Opens one animal's field-guide card when the widget loads. Works with any widget.</td><td><code>"horse"</code></td></tr>
+            <tr><td><code>data-min-height</code></td><td>Height in pixels to reserve while the widget loads, so the page doesn't jump.</td><td><code>"700"</code></td></tr>
+          </tbody>
+        </table>
+        <details style="margin-top:14px"><summary class="ui" style="cursor:pointer;font-weight:700">Animal names for <code>data-species</code></summary><p class="small" id="species-keys" style="line-height:1.9"></p></details>
+      </div>
+
+      <h3 style="margin-top:44px">Linking instead of embedding</h3>
+      <div class="box">
+        <p style="margin-top:0">Every section has its own address, so you can link straight to it from a newsletter, social post or QR code:</p>
+        <ul class="link-list" id="deep-links"></ul>
+        <p class="small" style="margin-bottom:0">Add <code>?species=bison</code> (or any animal name above) to open that animal's card directly, for example <a href="?species=horse">wildlife.labs.trlibrary.com/?species=horse</a>.</p>
+      </div>
+
+      <div class="notice">Widgets work on any site that allows a script tag and iframes. They collect no personal information and set no cookies. Questions or a site that won't cooperate? Contact the Library's communications team.</div>
     </div>
   </section>
 </main>
@@ -213,9 +274,14 @@
 
 <div class="drawer" id="drawer" aria-hidden="true">
   <div class="scrim" data-close></div>
-  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
-    <button class="close" data-close aria-label="Close">×</button>
-    <div id="drawer-body"></div>
+  <div class="stage">
+    <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
+      <div class="bar">
+        <div class="nav"><button data-step="-1" aria-label="Previous animal">‹</button><button data-step="1" aria-label="Next animal">›</button></div>
+        <button class="close" data-close aria-label="Close">×</button>
+      </div>
+      <div id="drawer-body"></div>
+    </div>
   </div>
 </div>
 

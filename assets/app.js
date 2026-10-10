@@ -70,7 +70,7 @@
   }
 
   // ---------- Tabs / routing ----------
-  const VIEWS = ["species", "horses", "map", "planner", "reports", "safety"];
+  const VIEWS = ["species", "horses", "map", "planner", "reports", "safety", "embed"];
   const rendered = {};
   function show(view, push = true) {
     if (!VIEWS.includes(view)) view = "species";
@@ -99,6 +99,7 @@
       renderSpecies();
     };
     const list = D.species.filter((s) => (state.group === "All" || s.group === state.group) && (state.unit === "all" || s.units.includes(state.unit)));
+    state.order = list.map((s) => s.key);
     $("#species-grid").innerHTML = list.map((s) => `
       <button class="card${s.featured && state.group === "All" ? " feature" : ""}" data-species="${s.key}">
         <div class="ph" style="background-image:url('${photo(s.photo)}')" role="img" aria-label="${esc(s.name)}">
@@ -154,17 +155,52 @@
         ${rel ? `<h3 style="font-size:24px;margin-top:18px">When it's reported</h3><p class="small">How often people report this animal each month, adjusted for how many people are in the park. Based on ${ins.total.toLocaleString()} iNaturalist observations. Hatched months have too few reports to judge.</p>${barChart(rel, MONTHS.map((m) => m[0]), { current: now - 1 })}` : ""}
         ${hourHtml}
         ${s.safety ? `<div class="safety"><b class="ui">Safety:</b> ${esc(s.safety)}</div>` : ""}
+        <div class="thumb-tip"><span class="ms" aria-hidden="true">thumb_up</span><div><b class="ui">The thumb test.</b> Stretch out your arm, give a thumbs-up and close one eye. If your thumb hides the whole ${esc(s.group === "Birds" ? "bird" : s.group === "Reptiles" ? "snake" : "animal")}, you're far enough back. Stay at least 25 yards from all wildlife.</div></div>
         ${spots.length ? `<p style="margin-top:18px"><button class="btn" data-mapfor="${s.key}">Show on the map</button></p>` : ""}
       </div>`;
     $("#drawer").classList.add("open");
+    if (!EMBED) document.documentElement.style.overflow = "hidden";
     $("#drawer").setAttribute("aria-hidden", "false");
     $(".drawer .sheet").scrollTop = 0;
-    $(".drawer .close").focus();
-    if (EMBED && window.parent !== window) window.parent.postMessage({ type: "wildlife-watch:scrolltop", id: params.get("id") }, "*");
+    state.current = key;
+    const order = state.order && state.order.includes(key) ? state.order : D.species.map((x) => x.key);
+    const i = order.indexOf(key);
+    $("#drawer-body .badge").insertAdjacentHTML("afterend", ` <span class="counter">${i + 1} of ${order.length}</span>`);
+    placeDialog();
+    $(".drawer .close").focus({ preventScroll: true });
+    if (EMBED && window.parent !== window) window.parent.postMessage({ type: "wildlife-watch:modal", open: true, id: params.get("id") }, "*");
   }
+  function stepSpecies(dir) {
+    const order = state.order && state.order.includes(state.current) ? state.order : D.species.map((x) => x.key);
+    const i = order.indexOf(state.current);
+    openSpecies(order[(i + dir + order.length) % order.length]);
+  }
+
+  // ----- Keep the embedded dialog inside the reader's visible slice of the iframe -----
+  const VP = { top: null, h: null, lastClickY: 0 };
+  function placeDialog() {
+    if (!EMBED) return;
+    let top = VP.top, h = VP.h;
+    if (top == null) { h = Math.min(900, Math.max(520, window.innerHeight)); top = Math.max(0, VP.lastClickY - h / 2); }
+    const docH = document.documentElement.scrollHeight;
+    h = Math.max(h, Math.min(560, docH));
+    top = Math.max(0, Math.min(top, docH - Math.min(h, docH)));
+    document.body.style.setProperty("--vp-top", top + "px");
+    document.body.style.setProperty("--vp-h", Math.min(h, docH) + "px");
+  }
+  window.addEventListener("message", (e) => {
+    const m = e.data;
+    if (!m || m.type !== "wildlife-watch:viewport") return;
+    VP.top = m.top; VP.h = m.height;
+    if ($("#drawer").classList.contains("open")) placeDialog();
+  });
+  document.addEventListener("pointerdown", (e) => { VP.lastClickY = e.pageY; }, true);
   function closeDrawer() {
+    if (!$("#drawer").classList.contains("open")) return;
     $("#drawer").classList.remove("open");
     $("#drawer").setAttribute("aria-hidden", "true");
+    document.documentElement.style.overflow = "";
+    if (EMBED && window.parent !== window) window.parent.postMessage({ type: "wildlife-watch:modal", open: false, id: params.get("id") }, "*");
   }
 
   // ---------- Horses ----------
@@ -440,7 +476,59 @@
     postHeight();
   }
 
-  const RENDER = { species: renderSpecies, horses: renderHorses, map: renderMap, planner: renderPlanner, reports: renderReports, safety: () => {} };
+
+  // ---------- Embed instructions ----------
+  const SITE = "https://wildlife.labs.trlibrary.com";
+  const WIDGETS = [
+    ["species", "Meet the Wildlife", "The full field guide: 22 animals with photos, stories, seasons and charts.", "bison"],
+    ["horses", "The Wild Horses", "How the horses got here, how bands work, and a coat-color guide.", "horse"],
+    ["map", "Where to Look", "Interactive map of viewing spots and where people report each animal.", "prairie-dog"],
+    ["planner", "Plan Your Outing", "Sunrise, sunset and best wildlife windows for any date, plus monthly best bets.", "elk"],
+    ["reports", "Recent Reports", "Recent sightings by area of the park, refreshed daily.", "coyote"],
+    ["safety", "Watch Safely", "The 25-yard rule and wildlife-watching etiquette.", "bighorn"],
+    ["all", "Everything", "The whole tool with its tabs, in one widget.", "pronghorn"],
+  ];
+  const SCRIPT_TAG = `<script src="${SITE}/embed.js" async></script>`;
+  const snippet = (v) => `<div data-wildlife-watch="${v}"></div>\n${SCRIPT_TAG}`;
+  async function copyText(t, btn) {
+    try { await navigator.clipboard.writeText(t); }
+    catch (e) { const ta = document.createElement("textarea"); ta.value = t; document.body.appendChild(ta); ta.select(); try { document.execCommand("copy"); } catch (_) {} ta.remove(); }
+    const old = btn.textContent; btn.textContent = "Copied"; setTimeout(() => (btn.textContent = old), 1600);
+  }
+  function renderEmbed() {
+    $("#code-script").textContent = SCRIPT_TAG;
+    $("#embed-list").innerHTML = WIDGETS.map(([v, name, desc, pic]) => `
+      <div class="emb" data-emb="${v}">
+        <div class="t" style="background-image:url('${photo(D.byKey[pic]?.photo || pic)}')"></div>
+        <div>
+          <b class="name">${esc(name)}</b>
+          <p>${esc(desc)}</p>
+          <div class="row">
+            <button class="btn" data-copy="${v}">Copy snippet</button>
+            <button class="btn ghost" data-preview="${v}">Preview</button>
+            <code>data-wildlife-watch="${v}"</code>
+          </div>
+          <pre class="code"><code>${esc(snippet(v))}</code></pre>
+        </div>
+        <div class="preview" hidden></div>
+      </div>`).join("");
+    $("#species-keys").innerHTML = D.species.map((s) => `<code>${s.key}</code> ${esc(s.name)}`).join(" · ");
+    $("#deep-links").innerHTML = VIEWS.filter((v) => v !== "embed").map((v) => `<li><a href="${SITE}/#${v}">${SITE.replace("https://", "")}/#${v}</a></li>`).join("");
+    $("#embed-list").onclick = (e) => {
+      const c = e.target.closest("[data-copy]");
+      if (c) { copyText(snippet(c.dataset.copy), c); return; }
+      const p = e.target.closest("[data-preview]");
+      if (p) {
+        const box = p.closest(".emb").querySelector(".preview");
+        if (!box.hidden) { box.hidden = true; box.innerHTML = ""; p.textContent = "Preview"; return; }
+        box.hidden = false; p.textContent = "Hide preview";
+        box.innerHTML = `<div data-wildlife-watch="${p.dataset.preview}" data-min-height="500"></div>`;
+        const sc = document.createElement("script"); sc.src = "embed.js?v=" + Date.now(); box.appendChild(sc);
+      }
+    };
+  }
+
+  const RENDER = { species: renderSpecies, horses: renderHorses, map: renderMap, planner: renderPlanner, reports: renderReports, safety: () => {}, embed: renderEmbed };
 
   // ---------- Credits ----------
   function renderCredits() {
@@ -462,6 +550,8 @@
     const mf = e.target.closest("[data-mapfor]");
     if (mf) { e.preventDefault(); mapFor(mf.dataset.mapfor); return; }
     if (e.target.closest("[data-close]")) closeDrawer();
+    const stp = e.target.closest("[data-step]");
+    if (stp) { stepSpecies(+stp.dataset.step); return; }
     const pic = e.target.closest("[data-pic]");
     if (pic) {
       $("#dr-big").style.backgroundImage = `url('${photo(pic.dataset.pic)}')`;
@@ -471,7 +561,12 @@
     const tab = e.target.closest(".tabs [data-view]");
     if (tab) show(tab.dataset.view);
   });
-  document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeDrawer(); });
+  document.addEventListener("keydown", (e) => {
+    if (!$("#drawer").classList.contains("open")) return;
+    if (e.key === "Escape") closeDrawer();
+    if (e.key === "ArrowRight") stepSpecies(1);
+    if (e.key === "ArrowLeft") stepSpecies(-1);
+  });
   window.addEventListener("hashchange", () => { const v = location.hash.slice(1); if (VIEWS.includes(v)) show(v, false); });
 
   // ---------- Boot ----------

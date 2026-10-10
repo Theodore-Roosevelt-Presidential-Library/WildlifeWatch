@@ -37,6 +37,7 @@
     f.loading = "lazy";
     f.setAttribute("allow", "fullscreen");
     f.style.cssText = "width:100%;border:0;display:block;overflow:hidden;height:" + (parseInt(el.getAttribute("data-min-height"), 10) || 700) + "px";
+    f.addEventListener("load", function () { report(f); });
     el.appendChild(f);
     frames[id] = f;
   }
@@ -46,8 +47,31 @@
     var f = frames[e.data.id];
     if (!f) return;
     if (e.data.type === "wildlife-watch:height" && e.data.height) f.style.height = Math.ceil(e.data.height) + "px";
-    if (e.data.type === "wildlife-watch:scrolltop") f.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (e.data.type === "wildlife-watch:modal") { f.__wwOpen = !!e.data.open; if (e.data.open) report(f); }
   });
+
+  // Tell each widget which slice of it is on screen, so its pop-up opens where
+  // the reader is looking instead of at the top of the widget.
+  function report(f) {
+    var r = f.getBoundingClientRect();
+    var vh = window.innerHeight || document.documentElement.clientHeight;
+    var header = 0;
+    try { // keep clear of a sticky site header, if one covers the top of the window
+      var el = document.elementFromPoint(Math.max(1, r.left + 2), 2);
+      while (el && el !== document.body) { var cs = getComputedStyle(el); if (cs.position === "fixed" || cs.position === "sticky") { header = Math.max(header, el.getBoundingClientRect().bottom); break; } el = el.parentElement; }
+    } catch (x) {}
+    header = Math.min(header, vh / 3);
+    var top = Math.max(0, header - r.top);
+    var bottom = Math.min(r.height, vh - r.top);
+    if (f.contentWindow) f.contentWindow.postMessage({ type: "wildlife-watch:viewport", top: top, height: Math.max(0, bottom - top) }, ORIGIN);
+  }
+  var ticking = false;
+  function reportAll() {
+    if (ticking) return; ticking = true;
+    requestAnimationFrame(function () { ticking = false; for (var k in frames) report(frames[k]); });
+  }
+  window.addEventListener("scroll", reportAll, { passive: true });
+  window.addEventListener("resize", reportAll);
 
   function scan() {
     var els = document.querySelectorAll("[data-wildlife-watch]");
