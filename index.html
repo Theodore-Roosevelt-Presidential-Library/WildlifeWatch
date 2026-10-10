@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wildlife Watch — Theodore Roosevelt Presidential Library</title>
+<meta name="description" content="Bison, wild horses, elk and more in Theodore Roosevelt National Park: what to look for, where to find them, and when to go. From the Theodore Roosevelt Presidential Library in Medora, North Dakota.">
+<link rel="canonical" href="https://wildlife.labs.trlibrary.com/">
+<meta property="og:title" content="Wildlife Watch — Theodore Roosevelt National Park">
+<meta property="og:description" content="Bison, wild horses and the animals of Roosevelt's Badlands — what to look for, where, and when.">
+<meta property="og:image" content="https://wildlife.labs.trlibrary.com/assets/photos/bison-2.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='12' fill='%2325282A'/%3E%3Ctext x='50' y='62' text-anchor='middle' font-family='Georgia,serif' font-size='44' font-weight='bold' fill='%23ffffff'%3ET.R.%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:FILL,wght@0..1,400&icon_names=block,directions_car,grass,pets,thumb_up,undo,visibility,volume_off&display=block">
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="wrap">
+    <a href="https://www.trlibrary.com/" aria-label="Theodore Roosevelt Presidential Library"><img src="assets/trpl-logo.svg" alt="Theodore Roosevelt Presidential Library"></a>
+    <a href="https://www.trlibrary.com/visit">Plan a visit to the Library →</a>
+  </div>
+</header>
+
+<div class="hero" id="hero" style="background-image:url('assets/photos/bison-2.jpg')">
+  <div class="wrap">
+    <div class="eyebrow">Theodore Roosevelt National Park · North Dakota Badlands</div>
+    <h1>Wildlife Watch</h1>
+    <p>Bison, wild horses and the animals of Roosevelt's Badlands — what to look for, where to find them, and when to go.</p>
+  </div>
+  <div class="hero-credit">Bison crossing the Little Missouri River. NPS Photo/Janice Shanks</div>
+</div>
+
+<nav class="tabs" aria-label="Wildlife Watch sections">
+  <div class="wrap" role="tablist">
+    <button role="tab" data-view="species" aria-selected="true">Meet the Wildlife</button>
+    <button role="tab" data-view="horses">The Wild Horses</button>
+    <button role="tab" data-view="map">Where to Look</button>
+    <button role="tab" data-view="planner">Plan Your Outing</button>
+    <button role="tab" data-view="reports">Recent Reports</button>
+    <button role="tab" data-view="safety">Watch Safely</button>
+  </div>
+</nav>
+
+<main>
+  <!-- SPECIES -->
+  <section class="panel" id="species" data-panel="species">
+    <div class="wrap">
+      <div class="panel-head">
+        <div>
+          <div class="eyebrow">Field guide</div>
+          <h2>Meet the Wildlife</h2>
+          <p class="lede">Bison, elk and bighorn sheep all vanished from the Badlands in Roosevelt's lifetime. They are here today because people decided they should be. Tap any animal to learn its story and when to look.</p>
+        </div>
+      </div>
+      <div class="chips" id="species-filters" role="group" aria-label="Filter animals" style="margin-bottom:22px"></div>
+      <div class="grid" id="species-grid"></div>
+    </div>
+  </section>
+
+  <!-- HORSES -->
+  <section class="panel" id="horses" data-panel="horses" hidden>
+    <div class="wrap" id="horses-root"></div>
+  </section>
+
+  <!-- MAP -->
+  <section class="panel" id="map-panel" data-panel="map" hidden>
+    <div class="wrap">
+      <div class="panel-head">
+        <div>
+          <div class="eyebrow">Where to look</div>
+          <h2>Where to Look</h2>
+          <p class="lede">Pick an animal to see the pullouts and trails where it turns up, and the areas where people in the park have reported it most.</p>
+        </div>
+      </div>
+      <div class="map-layout">
+        <aside class="map-side">
+          <h4>Animal</h4>
+          <select id="map-species" aria-label="Choose an animal"></select>
+          <h4>Jump to</h4>
+          <div class="chips" id="map-units"></div>
+          <h4>Layers</h4>
+          <label class="toggle"><input type="checkbox" id="lyr-spots" checked> <span class="swatch" style="background:var(--forest)"></span> Viewing spots</label>
+          <label class="toggle"><input type="checkbox" id="lyr-heat" checked> <span class="swatch" style="background:var(--orange)"></span> Where people report it</label>
+          <label class="toggle"><input type="checkbox" id="lyr-bison"> <span class="swatch" style="background:#7a4a2b"></span> Bison range, North Unit (USGS GPS collars)</label>
+          <h4 id="spot-head">Viewing spots</h4>
+          <ul class="spot-list" id="spot-list"></ul>
+          <p class="small" style="margin-top:16px">Reported areas are rolled up to roughly 1-km squares from iNaturalist community observations. Animals move — no map can promise a sighting.</p>
+        </aside>
+        <div id="map" role="region" aria-label="Map of Theodore Roosevelt National Park wildlife viewing areas"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLANNER -->
+  <section class="panel" id="planner" data-panel="planner" hidden>
+    <div class="wrap">
+      <div class="panel-head">
+        <div>
+          <div class="eyebrow">Plan your outing</div>
+          <h2>Plan Your Outing</h2>
+          <p class="lede">Wildlife keeps its own schedule: early morning and the last hour of light are best. Choose a date to see sunrise and sunset, what's happening in the park that month, and your best bets.</p>
+        </div>
+      </div>
+      <div class="planner-controls">
+        <label>Date <input type="date" id="plan-date"></label>
+        <label>Where
+          <select id="plan-unit">
+            <option value="south">South Unit (Medora)</option>
+            <option value="north">North Unit (Watford City)</option>
+          </select>
+        </label>
+        <a class="btn alt" id="plan-ics" href="#" download="wildlife-watch-dawn-drive.ics">Add dawn drive to calendar</a>
+      </div>
+      <div class="two">
+        <div>
+          <div class="box">
+            <h3>Light</h3>
+            <div class="sunbar" id="sunbar"></div>
+            <div class="sunbar-labels"><span>Midnight</span><span>Noon</span><span>Midnight</span></div>
+            <div class="times" id="plan-times"></div>
+            <p class="small" id="plan-tz"></p>
+          </div>
+          <div class="box" style="margin-top:20px">
+            <h3>Suggested route</h3>
+            <ol class="route" id="plan-route"></ol>
+          </div>
+        </div>
+        <div>
+          <div class="box">
+            <h3 id="plan-month-title">This month</h3>
+            <ul class="events" id="plan-events"></ul>
+            <h3 style="margin-top:22px">Best bets</h3>
+            <p class="small">Ranked by how often each animal is reported this month compared with the rest of the year, adjusted for the summer crowds.</p>
+            <div class="bets" id="plan-bets"></div>
+          </div>
+        </div>
+      </div>
+      <div class="links">
+        <a href="https://www.trlibrary.com/visit"><b>Visit the Library</b><span>Start your Badlands day at the Theodore Roosevelt Presidential Library.</span></a>
+        <a href="https://www.trlibrary.com/visit/lodging/availability"><b>Find a place to stay</b><span>Lodging availability near Medora.</span></a>
+        <a href="https://aurora.labs.trlibrary.com/"><b>Northern Lights Watch</b><span>Stay out after dark? Check the aurora outlook.</span></a>
+        <a href="https://www.nps.gov/thro/planyourvisit/conditions.htm"><b>Park conditions</b><span>Road and trail status from the National Park Service.</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- REPORTS -->
+  <section class="panel" id="reports" data-panel="reports" hidden>
+    <div class="wrap">
+      <div class="panel-head">
+        <div>
+          <div class="eyebrow">Recent reports</div>
+          <h2>Recent Reports</h2>
+          <p class="lede">What people in the park have photographed and shared lately, rolled up by area of the park.</p>
+        </div>
+      </div>
+      <div class="notice" id="reports-note"></div>
+      <div class="reports" id="reports-grid"></div>
+      <h3 style="margin-top:50px">Through the year</h3>
+      <p class="small">Darker squares mean an animal is reported more often that month, relative to everything people report in the park. Hatched months — late fall through early spring — have too few people reporting to judge.</p>
+      <div class="heat" id="heat"></div>
+    </div>
+  </section>
+
+  <!-- SAFETY -->
+  <section class="panel" id="safety" data-panel="safety" hidden>
+    <div class="wrap">
+      <div class="panel-head">
+        <div>
+          <div class="eyebrow">Watch safely</div>
+          <h2>Watch Safely</h2>
+          <p class="lede">Every animal here is wild — even the ones that look calm on the side of the road. Give them room and they will give you a better show.</p>
+        </div>
+      </div>
+      <div class="yardstick">
+        <h3>How far is 25 yards?</h3>
+        <svg viewBox="0 0 900 150" role="img" aria-label="25 yards is about the length of two school buses end to end">
+          <line x1="40" y1="120" x2="860" y2="120" stroke="#1B4633" stroke-width="3"/>
+          <line x1="40" y1="108" x2="40" y2="132" stroke="#1B4633" stroke-width="3"/>
+          <line x1="860" y1="108" x2="860" y2="132" stroke="#1B4633" stroke-width="3"/>
+          <g fill="#F9D635" stroke="#25282A" stroke-width="2">
+            <rect x="60" y="62" width="380" height="46" rx="8"/><rect x="460" y="62" width="380" height="46" rx="8"/>
+          </g>
+          <g fill="#25282A"><circle cx="120" cy="110" r="10"/><circle cx="390" cy="110" r="10"/><circle cx="520" cy="110" r="10"/><circle cx="790" cy="110" r="10"/></g>
+          <text x="450" y="40" text-anchor="middle" font-family="Dharma Gothic E, sans-serif" font-size="34" fill="#163728">25 YARDS ≈ TWO SCHOOL BUSES</text>
+        </svg>
+        <p class="small">The National Park Service asks everyone to stay at least 25 yards from all wildlife. For bison, more is better.</p>
+      </div>
+      <div class="rules">
+        <div class="rule"><div class="big"><span class="ms" aria-hidden="true">thumb_up</span></div><h4>The thumb test</h4><p>Hold out your arm and raise your thumb. If you can't cover the whole animal with it, you're too close.</p></div>
+        <div class="rule"><div class="big"><span class="ms" aria-hidden="true">undo</span></div><h4>If it moves, you moved too close</h4><p>An animal that stops eating, stares or walks away is telling you to back off.</p></div>
+        <div class="rule"><div class="big"><span class="ms" aria-hidden="true">directions_car</span></div><h4>Your car is a blind</h4><p>Bison and horses often walk right past cars. Stay inside, pull fully off the road and let them pass.</p></div>
+        <div class="rule"><div class="big"><span class="ms" aria-hidden="true">volume_off</span></div><h4>No calls, no spotlights</h4><p>Wildlife calls and spotlighting are not allowed in the park. They stress animals and change their behavior.</p></div>
+        <div class="rule"><div class="big"><span class="ms" aria-hidden="true">pets</span></div><h4>Pets stay in the car</h4><p>Dogs can frighten wildlife and be hurt by it. Pets aren't allowed on park trails.</p></div>
+        <div class="rule"><div class="big"><span class="ms" aria-hidden="true">visibility</span></div><h4>See one, look for more</h4><p>Drive slowly. Where there's one deer, elk, pronghorn or horse, there are usually others close by.</p></div>
+        <div class="rule"><div class="big"><span class="ms" aria-hidden="true">grass</span></div><h4>Watch your step</h4><p>Prairie rattlesnakes rest in tall grass and near prairie dog towns. Stay on trails and look before you sit.</p></div>
+        <div class="rule"><div class="big"><span class="ms" aria-hidden="true">block</span></div><h4>Never feed wildlife</h4><p>Feeding, chasing or harassing animals is illegal and dangerous — for you and for them.</p></div>
+      </div>
+      <p style="margin-top:30px"><a class="btn" href="checklist.html">Print a family spotting checklist</a></p>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div>Wildlife Watch is a guide from the <a href="https://www.trlibrary.com/">Theodore Roosevelt Presidential Library</a> in Medora, North Dakota. Theodore Roosevelt National Park is managed by the <a href="https://www.nps.gov/thro/">National Park Service</a>; check with rangers for current conditions.</div>
+    <div>Sources: National Park Service; U.S. Geological Survey bison GPS data (Sargeant, McCann &amp; Hodge, 2025, <a href="https://doi.org/10.5066/P13M5MHT">doi:10.5066/P13M5MHT</a>); <a href="https://www.inaturalist.org/places/theodore-roosevelt">iNaturalist</a> community observations, refreshed daily. Map tiles: USGS The National Map. <a href="#" id="photo-credits-link">Photo credits</a>.</div>
+    <div id="photo-credits" hidden style="font-size:12px"></div>
+  </div>
+</footer>
+
+<div class="drawer" id="drawer" aria-hidden="true">
+  <div class="scrim" data-close></div>
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
+    <button class="close" data-close aria-label="Close">×</button>
+    <div id="drawer-body"></div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="assets/sun.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

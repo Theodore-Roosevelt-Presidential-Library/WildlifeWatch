@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Badlands Wildlife Checklist — Theodore Roosevelt Presidential Library</title>
+<link rel="stylesheet" href="assets/app.css">
+<style>
+  body { background: #fff; }
+  .sheet { max-width: 8.5in; margin: 0 auto; padding: 0.4in 0.45in; }
+  .top { display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 3px solid var(--forest); padding-bottom: 10px; }
+  .top h1 { font-size: 64px; }
+  .top img { height: 34px; filter: invert(1) brightness(.2); }
+  .intro { font-size: 15px; margin: 10px 0 14px; }
+  .list { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 18px; }
+  .item { display: grid; grid-template-columns: 22px 64px 1fr; gap: 10px; align-items: center; break-inside: avoid; padding: 4px 0; border-bottom: 1px solid var(--line); }
+  .box { width: 20px; height: 20px; border: 2px solid var(--forest); border-radius: 4px; background: #fff; padding: 0; box-shadow: none; }
+  .thumb { width: 64px; height: 46px; border-radius: 5px; background: center/cover; }
+  .item b { font: 700 22px/1 var(--display); text-transform: uppercase; color: var(--forest-dark); display: block; }
+  .item small { font: 11.5px/1.3 var(--ui); color: var(--muted); }
+  .foot { margin-top: 14px; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; font: 12.5px/1.45 var(--ui); }
+  .foot div { background: var(--sand-tint); border-radius: 8px; padding: 10px 12px; }
+  .foot b { font: 700 20px var(--display); text-transform: uppercase; color: var(--orange-dark); display: block; }
+  .noprint { text-align: center; margin: 18px 0; }
+  @media print { .noprint { display: none; } .sheet { padding: 0; } @page { size: letter; margin: .4in; } }
+</style>
+</head>
+<body>
+<div class="noprint"><button class="btn" onclick="window.print()">Print this checklist</button> <a class="btn alt" href="./">Back to Wildlife Watch</a></div>
+<div class="sheet">
+  <div class="top">
+    <div><div class="eyebrow">Theodore Roosevelt National Park</div><h1>Badlands Wildlife Checklist</h1></div>
+    <img src="assets/trpl-logo.svg" alt="Theodore Roosevelt Presidential Library">
+  </div>
+  <p class="intro">How many can you find? Check off each animal you spot. <b>Tip:</b> the first and last hours of daylight are best.</p>
+  <div class="list" id="list"></div>
+  <div class="foot">
+    <div><b>Stay 25 yards back</b>That's about two school buses. If you can't cover the animal with your thumb at arm's length, you're too close.</div>
+    <div><b>Plan your outing</b>Maps, seasons and recent reports at <span style="font-weight:700">wildlife.labs.trlibrary.com</span>. Start your day at the Theodore Roosevelt Presidential Library in Medora.</div>
+  </div>
+</div>
+<script>
+fetch("data/species.json").then(r => r.json()).then(list => {
+  document.getElementById("list").innerHTML = list.map(s => `
+    <div class="item">
+      <span class="box"></span>
+      <span class="thumb" style="background-image:url('assets/photos/${s.photo}.jpg')"></span>
+      <span><b>${s.name}</b><small>${s.units.length === 2 ? "Both units" : s.units[0] === "south" ? "South Unit" : "North Unit"} · ${s.bestTime}</small></span>
+    </div>`).join("");
+});
+</script>
+</body>
+</html>

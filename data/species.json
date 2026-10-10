@@ -1,0 +1,925 @@
+[
+ {
+  "key": "bison",
+  "name": "American Bison",
+  "sci": "Bison bison",
+  "group": "Mammals",
+  "inat": 208700,
+  "photo": "bison",
+  "gallery": [
+   "bison-2",
+   "bison-calf",
+   "bison-3",
+   "bison-4"
+  ],
+  "featured": true,
+  "status": "reintroduced",
+  "statusNote": "Returned 1956 (South Unit), 1962 (North Unit)",
+  "units": [
+   "south",
+   "north"
+  ],
+  "tagline": "The animal that brought Roosevelt west.",
+  "story": "Bison once covered the northern plains, then were hunted to the edge of extinction in a few short decades. None remained when the park was founded. In 1956, 29 bison arrived in the South Unit from Fort Niobrara National Wildlife Refuge in Nebraska; in 1962, 20 of their descendants started the North Unit herd. The park now manages roughly 200–500 bison in the South Unit and 100–300 in the North Unit, and surplus animals go to tribal nations and other herds.",
+  "lookFor": "Dark shapes on open grassland and along the park roads. Wallows — bare, dusty bowls where bison roll. Calves are born a bright orange-red and turn brown by their first winter.",
+  "where": "Both units, often right from the scenic drives. They wander through campgrounds, too.",
+  "spots": [
+   "s-cottonwood",
+   "s-paddock",
+   "s-scoria",
+   "n-juniper",
+   "n-oxbow"
+  ],
+  "bestTime": "Any time of day; most active early and late.",
+  "best": [
+   5,
+   6,
+   7,
+   8,
+   9
+  ],
+  "events": [
+   {
+    "months": [
+     4,
+     5,
+     6
+    ],
+    "label": "Orange calves arrive"
+   },
+   {
+    "months": [
+     7,
+     8
+    ],
+    "label": "Rut — bulls bellow, wallow and spar"
+   },
+   {
+    "months": [
+     11,
+     12,
+     1,
+     2,
+     3
+    ],
+    "label": "Frost-covered winter coats"
+   }
+  ],
+  "size": "Bulls up to about 2,000 lb; cows about half that.",
+  "tr": "Roosevelt first came to the Dakota Badlands in September 1883 to hunt bison while some still remained. The near-disappearance of the herds he saw here shaped the conservationist he became.",
+  "safety": "Bison are fast, unpredictable and responsible for injuries in this park. Stay in or near your vehicle when they are close."
+ },
+ {
+  "key": "horse",
+  "name": "Wild Horses",
+  "sci": "Equus caballus",
+  "group": "Mammals",
+  "inat": 209233,
+  "photo": "horse",
+  "gallery": [
+   "horse-2",
+   "horse-3",
+   "horse-4",
+   "horse-5",
+   "horse-6",
+   "horse-7"
+  ],
+  "featured": true,
+  "status": "historic",
+  "statusNote": "Living link to the open-range era",
+  "units": [
+   "south"
+  ],
+  "tagline": "Free-roaming bands that carry the open range into the present.",
+  "story": "Horses ran these badlands before there was a park. Ranchers of Roosevelt's era turned horses out on the open range, and when the park was fenced in the 1950s a few bands slipped every roundup. Since 1970 the park has managed them as part of the historic scene. Today roughly 200 horses roam the South Unit in family bands of 5 to 15, each led by a stallion.",
+  "lookFor": "Small groups grazing together, often with a stallion keeping watch at the edge. Many are blue roans, grays and blacks; some have white 'bald' faces and dappling. A lone horse is usually a young bachelor stallion.",
+  "where": "South Unit only. Watch from the Scenic Loop Drive — the east side between Boicourt Overlook and Buck Hill is a favorite — and from Painted Canyon and the I-94 corridor.",
+  "spots": [
+   "s-boicourt",
+   "s-buckhill",
+   "s-painted",
+   "s-scoria"
+  ],
+  "bestTime": "Early morning and evening, when bands move to graze and water.",
+  "best": [
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "events": [
+   {
+    "months": [
+     4,
+     5,
+     6
+    ],
+    "label": "Foals are born"
+   },
+   {
+    "months": [
+     5,
+     6,
+     7
+    ],
+    "label": "Young stallions leave their birth bands"
+   },
+   {
+    "months": [
+     11,
+     12,
+     1,
+     2,
+     3
+    ],
+    "label": "Shaggy winter coats"
+   }
+  ],
+  "size": "Compact, sturdy horses shaped by generations on the range.",
+  "tr": "Roosevelt's Badlands life ran on horseback — long days in the saddle working cattle on the open range. His favorite horse was named Manitou.",
+  "safety": "They look tame. They are not. Give stallions extra room, especially around foals."
+ },
+ {
+  "key": "elk",
+  "name": "Elk",
+  "sci": "Cervus canadensis",
+  "group": "Mammals",
+  "inat": 204114,
+  "photo": "elk",
+  "gallery": [
+   "elk-2"
+  ],
+  "status": "reintroduced",
+  "statusNote": "Returned 1985 (South Unit)",
+  "units": [
+   "south"
+  ],
+  "tagline": "Hard to find, impossible to forget in September.",
+  "story": "Elk were gone from North Dakota's badlands by the late 1800s. The park brought them back to the South Unit in 1985 with animals from Wind Cave National Park in South Dakota. The herd grew fast and now ranges in and out of the park across the surrounding country.",
+  "lookFor": "Pale rumps and dark manes at the edge of grassland and juniper draws. In fall, listen before you look — a bull's bugle carries for miles.",
+  "where": "South Unit only. Open grassland near Buck Hill, the Ridgeline Nature Trail area, and the southeast corner of the park visible from I-94.",
+  "spots": [
+   "s-buckhill",
+   "s-scoria",
+   "s-painted"
+  ],
+  "bestTime": "First and last light. By day they rest in wooded draws.",
+  "best": [
+   9,
+   10
+  ],
+  "events": [
+   {
+    "months": [
+     9,
+     10
+    ],
+    "label": "Rut — bulls bugle and gather harems"
+   },
+   {
+    "months": [
+     5,
+     6
+    ],
+    "label": "Calves born"
+   }
+  ],
+  "size": "Bulls 700 lb or more, with antlers that can span five feet.",
+  "safety": "Bulls are aggressive during the fall rut. Watch from the road."
+ },
+ {
+  "key": "pronghorn",
+  "name": "Pronghorn",
+  "sci": "Antilocapra americana",
+  "group": "Mammals",
+  "inat": 42429,
+  "photo": "pronghorn",
+  "status": "native",
+  "units": [
+   "south",
+   "north"
+  ],
+  "tagline": "Built for speed on open ground.",
+  "story": "Not a true antelope, the pronghorn is the last of a family found only in North America. It is the continent's fastest runner over distance, able to hold high speeds for miles. Most live on the wider Little Missouri National Grassland, and small groups wander into the park.",
+  "lookFor": "Tan and white bodies with bold white rumps, usually on flat, open grassland where they can see danger coming.",
+  "where": "Open plateaus and park edges in both units; the grasslands outside the park hold more.",
+  "spots": [
+   "s-painted",
+   "s-boicourt",
+   "n-entrance"
+  ],
+  "bestTime": "Daytime, in open country.",
+  "best": [
+   5,
+   6,
+   7,
+   8,
+   9
+  ],
+  "events": [
+   {
+    "months": [
+     5,
+     6
+    ],
+    "label": "Fawns, often twins"
+   }
+  ],
+  "size": "About 90–140 lb."
+ },
+ {
+  "key": "mule-deer",
+  "name": "Mule Deer",
+  "sci": "Odocoileus hemionus",
+  "group": "Mammals",
+  "inat": 42220,
+  "photo": "mule-deer",
+  "status": "native",
+  "units": [
+   "south",
+   "north"
+  ],
+  "tagline": "Big ears, bouncing gait, badlands everywhere.",
+  "story": "Mule deer are the deer of the broken country — buttes, draws and juniper slopes. When startled they bound away on all four feet at once, a gait called stotting.",
+  "lookFor": "Large mule-like ears, a white rump and a small black-tipped tail.",
+  "where": "Open areas along the park roads in both units. By day they rest in juniper thickets.",
+  "spots": [
+   "s-scoria",
+   "s-windcanyon",
+   "n-oxbow",
+   "n-riverbend"
+  ],
+  "bestTime": "Dusk to dawn.",
+  "best": [
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "events": [
+   {
+    "months": [
+     6,
+     7,
+     8
+    ],
+    "label": "Bucks in velvet"
+   },
+   {
+    "months": [
+     11,
+     12
+    ],
+    "label": "Rut"
+   }
+  ],
+  "size": "Bucks about 150–250 lb."
+ },
+ {
+  "key": "white-tailed-deer",
+  "name": "White-tailed Deer",
+  "sci": "Odocoileus virginianus",
+  "group": "Mammals",
+  "inat": 42223,
+  "photo": "white-tailed-deer",
+  "status": "native",
+  "units": [
+   "south",
+   "north"
+  ],
+  "tagline": "The river-bottom deer.",
+  "story": "White-tailed deer keep to the wooded bottomlands along the Little Missouri, where cottonwoods and thick brush give cover.",
+  "lookFor": "A broad tail that flashes white when raised in alarm.",
+  "where": "River bottoms, campgrounds and picnic areas in both units.",
+  "spots": [
+   "s-cottonwood",
+   "n-juniper"
+  ],
+  "bestTime": "Evening and early morning.",
+  "best": [
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "events": [
+   {
+    "months": [
+     6,
+     7
+    ],
+    "label": "Spotted fawns"
+   }
+  ],
+  "size": "Bucks about 150–200 lb."
+ },
+ {
+  "key": "bighorn",
+  "name": "Bighorn Sheep",
+  "sci": "Ovis canadensis",
+  "group": "Mammals",
+  "inat": 42391,
+  "photo": "bighorn",
+  "status": "reintroduced",
+  "statusNote": "Returned to the badlands from 1956",
+  "units": [
+   "north"
+  ],
+  "tagline": "Cliff climbers of the North Unit.",
+  "story": "North Dakota's native badlands bighorns were gone by about 1905. In 1956 the North Dakota Game and Fish Department released bighorns from British Columbia into the badlands, and transplants into the park followed. Today they are most likely in the rugged North Unit.",
+  "lookFor": "Stocky gray-brown sheep with white rumps on steep, broken slopes. Rams carry heavy curled horns.",
+  "where": "Steep buttes and cliff faces in the North Unit.",
+  "spots": [
+   "n-riverbend",
+   "n-oxbow"
+  ],
+  "bestTime": "Morning, scanning slopes with binoculars.",
+  "best": [
+   11,
+   12,
+   1,
+   5,
+   6
+  ],
+  "events": [
+   {
+    "months": [
+     11,
+     12
+    ],
+    "label": "Rut — rams clash horns"
+   },
+   {
+    "months": [
+     5,
+     6
+    ],
+    "label": "Lambs on the cliffs"
+   }
+  ],
+  "size": "Rams up to about 300 lb."
+ },
+ {
+  "key": "longhorn",
+  "name": "Longhorn Steers",
+  "sci": "Bos taurus",
+  "group": "Mammals",
+  "inat": 74113,
+  "photo": "longhorn",
+  "status": "historic",
+  "statusNote": "Demonstration herd since 1967",
+  "units": [
+   "north"
+  ],
+  "tagline": "A walking memory of the great cattle drives.",
+  "story": "In the 1880s cowboys drove herds north from as far as Texas to the Dakota grasslands, and the Long X Trail ran through what is now the North Unit. The park started a small demonstration herd of longhorn steers in 1967 to keep that chapter in view.",
+  "lookFor": "Unmistakable sweeping horns on cattle of every color.",
+  "where": "North Unit, often near mile marker 2 of the scenic drive.",
+  "spots": [
+   "n-entrance"
+  ],
+  "bestTime": "Any time.",
+  "best": [
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "events": [],
+  "size": "Horns can span more than six feet.",
+  "tr": "Roosevelt arrived just as the cattle boom began and put his money into the Maltese Cross and Elkhorn ranches."
+ },
+ {
+  "key": "prairie-dog",
+  "name": "Black-tailed Prairie Dog",
+  "sci": "Cynomys ludovicianus",
+  "group": "Mammals",
+  "inat": 46179,
+  "photo": "prairie-dog",
+  "gallery": [
+   "prairie-dog-2",
+   "prairie-dog-town"
+  ],
+  "status": "native",
+  "units": [
+   "south",
+   "north"
+  ],
+  "tagline": "Small animal, whole ecosystem.",
+  "story": "Prairie dogs live in towns of connected burrows and families. They clip the grass short, which draws grazing bison and pronghorn, and their burrows shelter burrowing owls, snakes and more. Badgers, coyotes and eagles hunt them.",
+  "lookFor": "Sentries standing tall on dirt mounds, sharp warning barks, and family members greeting nose to nose.",
+  "where": "Three large towns line the South Unit's Scenic Loop Drive. In the North Unit, the nearest town is about a one-mile hike from the Caprock Coulee parking area.",
+  "spots": [
+   "s-entrance",
+   "s-scoria",
+   "s-paddock",
+   "n-juniper"
+  ],
+  "bestTime": "Daytime, on warm days.",
+  "best": [
+   4,
+   5,
+   6,
+   7,
+   8,
+   9
+  ],
+  "events": [
+   {
+    "months": [
+     5,
+     6
+    ],
+    "label": "Pups pop out of the burrows"
+   },
+   {
+    "months": [
+     12,
+     1,
+     2
+    ],
+    "label": "Quiet, but not hibernating"
+   }
+  ],
+  "size": "About 1–3 lb."
+ },
+ {
+  "key": "coyote",
+  "name": "Coyote",
+  "sci": "Canis latrans",
+  "group": "Mammals",
+  "inat": 42051,
+  "photo": "coyote",
+  "status": "native",
+  "units": [
+   "south",
+   "north"
+  ],
+  "tagline": "Heard more than seen.",
+  "story": "Coyotes thrive in the badlands, hunting prairie dogs, rabbits and mice. Their yips and howls after dark are part of the night here.",
+  "lookFor": "A lean gray-tan dog trotting with its tail held low.",
+  "where": "Near prairie dog towns in both units.",
+  "spots": [
+   "s-scoria",
+   "s-entrance",
+   "n-juniper"
+  ],
+  "bestTime": "Twilight; listen after dark.",
+  "best": [
+   1,
+   2,
+   3,
+   10,
+   11,
+   12
+  ],
+  "events": [
+   {
+    "months": [
+     1,
+     2
+    ],
+    "label": "Breeding season — lots of howling"
+   },
+   {
+    "months": [
+     4,
+     5
+    ],
+    "label": "Pups in dens"
+   }
+  ],
+  "size": "About 25–40 lb."
+ },
+ {
+  "key": "badger",
+  "name": "American Badger",
+  "sci": "Taxidea taxus",
+  "group": "Mammals",
+  "inat": 41789,
+  "photo": "badger",
+  "status": "native",
+  "units": [
+   "south",
+   "north"
+  ],
+  "tagline": "A digging machine.",
+  "story": "Badgers hunt prairie dogs by digging into their burrows faster than the prey can escape. A fresh badger dig is easier to spot than the badger.",
+  "lookFor": "A low, flat, gray body with a white stripe from nose to shoulders.",
+  "where": "Near prairie dog towns.",
+  "spots": [
+   "s-scoria",
+   "s-paddock"
+  ],
+  "bestTime": "Dawn or dusk.",
+  "best": [
+   5,
+   6,
+   7,
+   8,
+   9
+  ],
+  "events": [],
+  "size": "About 15–25 lb."
+ },
+ {
+  "key": "porcupine",
+  "name": "Porcupine",
+  "sci": "Erethizon dorsatum",
+  "group": "Mammals",
+  "inat": 44026,
+  "photo": "porcupine",
+  "status": "native",
+  "units": [
+   "south",
+   "north"
+  ],
+  "tagline": "Look up in the cottonwoods.",
+  "story": "Porcupines spend much of the day up in trees and bushes, coming down more at night. They are often spotted along park roads after dark.",
+  "lookFor": "A dark, round lump high in a cottonwood.",
+  "where": "Wooded river bottoms and along park roads.",
+  "spots": [
+   "s-cottonwood",
+   "n-juniper"
+  ],
+  "bestTime": "Evening and night.",
+  "best": [
+   3,
+   4,
+   5,
+   9,
+   10,
+   11
+  ],
+  "events": [],
+  "size": "About 12–25 lb."
+ },
+ {
+  "key": "beaver",
+  "name": "Beaver",
+  "sci": "Castor canadensis",
+  "group": "Mammals",
+  "inat": 43794,
+  "photo": "beaver",
+  "status": "native",
+  "units": [
+   "south",
+   "north"
+  ],
+  "tagline": "Engineers of the river.",
+  "story": "Beavers live along the Little Missouri River and North Unit creeks, dropping cottonwoods and building lodges. Chewed stumps along the river are their calling card.",
+  "lookFor": "A V-shaped wake on calm water at dusk.",
+  "where": "The Little Missouri River and creeks near the North Unit entrance.",
+  "spots": [
+   "s-cottonwood",
+   "n-entrance"
+  ],
+  "bestTime": "Dusk.",
+  "best": [
+   5,
+   6,
+   7,
+   8,
+   9
+  ],
+  "events": [],
+  "size": "About 30–60 lb."
+ },
+ {
+  "key": "bobcat",
+  "name": "Bobcat",
+  "sci": "Lynx rufus",
+  "group": "Mammals",
+  "inat": 41976,
+  "photo": "bobcat",
+  "status": "native",
+  "units": [
+   "south",
+   "north"
+  ],
+  "tagline": "The park's rarest sighting.",
+  "story": "Only a few bobcats are seen in the park each summer. Count yourself lucky.",
+  "lookFor": "A short-tailed cat with tufted ears on bare, rocky slopes.",
+  "where": "Barren, rocky slopes.",
+  "spots": [],
+  "bestTime": "Night.",
+  "best": [
+   6,
+   7,
+   8
+  ],
+  "events": [],
+  "size": "About 15–30 lb."
+ },
+ {
+  "key": "golden-eagle",
+  "name": "Golden Eagle",
+  "sci": "Aquila chrysaetos",
+  "group": "Birds",
+  "inat": 5074,
+  "photo": "golden-eagle",
+  "status": "native",
+  "units": [
+   "south",
+   "north"
+  ],
+  "tagline": "Scan the sky over the river.",
+  "story": "Golden eagles nest on badlands cliffs and hunt across the grasslands. They are here year-round.",
+  "lookFor": "A huge dark raptor soaring with wings held in a shallow V.",
+  "where": "The Little Missouri River floodplain and the North Unit's River Bend Overlook.",
+  "spots": [
+   "n-riverbend",
+   "s-windcanyon"
+  ],
+  "bestTime": "Mid-morning, when thermals rise.",
+  "best": [
+   3,
+   4,
+   5,
+   9,
+   10,
+   11
+  ],
+  "events": [
+   {
+    "months": [
+     3,
+     4,
+     5
+    ],
+    "label": "Nesting season on the cliffs"
+   }
+  ],
+  "size": "Wingspan up to about 7 feet."
+ },
+ {
+  "key": "sharp-tailed-grouse",
+  "name": "Sharp-tailed Grouse",
+  "sci": "Tympanuchus phasianellus",
+  "group": "Birds",
+  "inat": 1070,
+  "photo": "sharp-tailed-grouse",
+  "status": "native",
+  "units": [
+   "south",
+   "north"
+  ],
+  "tagline": "Spring dancers of the prairie.",
+  "story": "Each spring, males gather on open ground called leks and dance at dawn — stamping their feet, rattling their tails and inflating purple neck sacs.",
+  "lookFor": "A speckled brown bird with a pointed tail, flushing from the grass with a cackle.",
+  "where": "Open grassland in both units.",
+  "spots": [],
+  "bestTime": "Dawn.",
+  "best": [
+   4,
+   5
+  ],
+  "events": [
+   {
+    "months": [
+     4,
+     5
+    ],
+    "label": "Leks — the dawn dance"
+   }
+  ],
+  "size": "About 2 lb."
+ },
+ {
+  "key": "wild-turkey",
+  "name": "Wild Turkey",
+  "sci": "Meleagris gallopavo",
+  "group": "Birds",
+  "inat": 906,
+  "photo": "wild-turkey",
+  "status": "native",
+  "units": [
+   "south",
+   "north"
+  ],
+  "tagline": "One of the park's largest birds.",
+  "story": "Wild turkeys are a common sight in the wooded draws and river bottoms.",
+  "lookFor": "Flocks walking at the edge of trees; toms fanning their tails in spring.",
+  "where": "River bottoms and campgrounds.",
+  "spots": [
+   "s-cottonwood",
+   "n-juniper"
+  ],
+  "bestTime": "Morning.",
+  "best": [
+   4,
+   5,
+   6,
+   9,
+   10
+  ],
+  "events": [
+   {
+    "months": [
+     4,
+     5
+    ],
+    "label": "Toms gobble and strut"
+   }
+  ],
+  "size": "Toms up to about 20 lb."
+ },
+ {
+  "key": "burrowing-owl",
+  "name": "Burrowing Owl",
+  "sci": "Athene cunicularia",
+  "group": "Birds",
+  "inat": 19975,
+  "photo": "burrowing-owl",
+  "status": "native",
+  "units": [
+   "south",
+   "north"
+  ],
+  "tagline": "An owl that lives underground.",
+  "story": "Burrowing owls nest in old prairie dog burrows. They arrive in spring and leave before winter.",
+  "lookFor": "A small, long-legged owl standing on a burrow mound in daylight.",
+  "where": "Prairie dog towns.",
+  "spots": [
+   "s-scoria",
+   "s-paddock"
+  ],
+  "bestTime": "Daytime in summer.",
+  "best": [
+   5,
+   6,
+   7,
+   8
+  ],
+  "events": [
+   {
+    "months": [
+     5,
+     6,
+     7,
+     8
+    ],
+    "label": "Summer residents"
+   }
+  ],
+  "size": "About 6 oz."
+ },
+ {
+  "key": "great-horned-owl",
+  "name": "Great Horned Owl",
+  "sci": "Bubo virginianus",
+  "group": "Birds",
+  "inat": 20044,
+  "photo": "great-horned-owl",
+  "status": "native",
+  "units": [
+   "south",
+   "north"
+  ],
+  "tagline": "The voice of the cottonwoods at night.",
+  "story": "Great horned owls nest early in the year, so fluffy owlets are often perched in the cottonwoods by spring.",
+  "lookFor": "Ear tufts and a deep, soft hoo-hoo at dusk.",
+  "where": "Cottonwood groves along the river.",
+  "spots": [
+   "s-cottonwood"
+  ],
+  "bestTime": "Dusk.",
+  "best": [
+   3,
+   4,
+   5
+  ],
+  "events": [
+   {
+    "months": [
+     4,
+     5
+    ],
+    "label": "Owlets in the trees"
+   }
+  ],
+  "size": "Wingspan about 4–5 feet."
+ },
+ {
+  "key": "meadowlark",
+  "name": "Western Meadowlark",
+  "sci": "Sturnella neglecta",
+  "group": "Birds",
+  "inat": 9535,
+  "photo": "meadowlark",
+  "status": "native",
+  "units": [
+   "south",
+   "north"
+  ],
+  "tagline": "North Dakota's state bird.",
+  "story": "The meadowlark's bubbling song is the sound of a badlands spring morning.",
+  "lookFor": "A bright yellow chest with a black V, singing from a fence post or shrub.",
+  "where": "Grassland everywhere.",
+  "spots": [],
+  "bestTime": "Morning.",
+  "best": [
+   4,
+   5,
+   6,
+   7
+  ],
+  "events": [
+   {
+    "months": [
+     4,
+     5,
+     6
+    ],
+    "label": "Singing season"
+   }
+  ],
+  "size": "About robin-sized."
+ },
+ {
+  "key": "magpie",
+  "name": "Black-billed Magpie",
+  "sci": "Pica hudsonia",
+  "group": "Birds",
+  "inat": 143853,
+  "photo": "magpie",
+  "status": "native",
+  "units": [
+   "south",
+   "north"
+  ],
+  "tagline": "Loud, bold and always around.",
+  "story": "Magpies are year-round residents, often seen near campgrounds and riding on the backs of grazing animals.",
+  "lookFor": "Black and white with a very long, iridescent tail.",
+  "where": "Everywhere, especially river bottoms.",
+  "spots": [
+   "s-cottonwood"
+  ],
+  "bestTime": "Any time.",
+  "best": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12
+  ],
+  "events": [],
+  "size": "About 18–24 inches long, half of it tail."
+ },
+ {
+  "key": "rattlesnake",
+  "name": "Prairie Rattlesnake",
+  "sci": "Crotalus viridis",
+  "group": "Reptiles",
+  "inat": 81526,
+  "photo": "rattlesnake",
+  "status": "native",
+  "units": [
+   "south",
+   "north"
+  ],
+  "tagline": "The park's only venomous snake.",
+  "story": "Prairie rattlesnakes avoid people. If threatened, they coil and rattle as a warning. Bullsnakes and racers are seen more often.",
+  "lookFor": "A blotched tan snake with a rattle. Watch where you step in tall grass and around prairie dog towns.",
+  "where": "Tall grass, shrubs and sometimes park roads.",
+  "spots": [],
+  "bestTime": "Warm days; they bask in mornings.",
+  "best": [
+   5,
+   6,
+   7,
+   8,
+   9
+  ],
+  "events": [
+   {
+    "months": [
+     5,
+     6,
+     7,
+     8,
+     9
+    ],
+    "label": "Active season"
+   }
+  ],
+  "size": "Usually 3–4 feet.",
+  "safety": "Back away slowly and give it room. Stay on trails."
+ }
+]

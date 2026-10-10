@@ -1,0 +1,15 @@
+[
+ {"id": "s-entrance", "unit": "south", "name": "Medora entrance & Skyline Vista", "lat": 46.926, "lng": -103.530},
+ {"id": "s-cottonwood", "unit": "south", "name": "Cottonwood Campground & river bottoms", "lat": 46.952, "lng": -103.527},
+ {"id": "s-windcanyon", "unit": "south", "name": "Wind Canyon & the north loop", "lat": 46.986, "lng": -103.484},
+ {"id": "s-paddock", "unit": "south", "name": "Paddock Creek & Jones Creek", "lat": 46.950, "lng": -103.462},
+ {"id": "s-scoria", "unit": "south", "name": "Scoria Point, Ridgeline & Badlands Overlook", "lat": 46.925, "lng": -103.470},
+ {"id": "s-boicourt", "unit": "south", "name": "Boicourt Overlook & east loop", "lat": 46.957, "lng": -103.405},
+ {"id": "s-buckhill", "unit": "south", "name": "Buck Hill & Coal Vein", "lat": 46.925, "lng": -103.392},
+ {"id": "s-painted", "unit": "south", "name": "Old East Entrance & Painted Canyon", "lat": 46.900, "lng": -103.395},
+ {"id": "n-entrance", "unit": "north", "name": "North Unit entrance & longhorn pasture", "lat": 47.598, "lng": -103.275},
+ {"id": "n-juniper", "unit": "north", "name": "Juniper Campground & Caprock Coulee", "lat": 47.600, "lng": -103.345},
+ {"id": "n-riverbend", "unit": "north", "name": "River Bend Overlook area", "lat": 47.590, "lng": -103.385},
+ {"id": "n-oxbow", "unit": "north", "name": "Oxbow Overlook & Sperati Point", "lat": 47.600, "lng": -103.440},
+ {"id": "e-elkhorn", "unit": "elkhorn", "name": "Elkhorn Ranch Unit", "lat": 47.250, "lng": -103.622}
+]

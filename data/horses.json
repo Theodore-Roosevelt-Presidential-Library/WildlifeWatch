@@ -1,0 +1,189 @@
+{
+ "intro": "No animal in the park carries Roosevelt's Badlands forward like the wild horses. They are here because the open range was here — and because, again and again, people fought to keep them.",
+ "count": {
+  "value": "~200",
+  "note": "Wild horses in the South Unit — the National Park Service estimate."
+ },
+ "timeline": [
+  {
+   "when": "About 10,000 years ago",
+   "title": "Horses vanish from North America",
+   "text": "Horses evolved in North America but disappeared from the continent at the end of the last Ice Age, surviving in Europe and Asia.",
+   "source": "NPS"
+  },
+  {
+   "when": "1500s",
+   "title": "The horse returns",
+   "text": "Spanish explorers bring horses back to the Americas. Over the next two centuries horses spread north across the Great Plains and transform life on the grasslands.",
+   "source": "NPS"
+  },
+  {
+   "when": "1600s–1800s",
+   "title": "Mustangs on the plains",
+   "text": "Strays and escapees form free-ranging herds that sometimes number in the thousands.",
+   "source": "NPS"
+  },
+  {
+   "when": "1883",
+   "title": "Roosevelt rides into the Badlands",
+   "text": "T.R. arrives in September 1883 and soon invests in cattle. Ranch life here runs on horseback, and ranchers turn horses out on the open range to live and breed, rounding them up when needed.",
+   "source": "NPS"
+  },
+  {
+   "when": "1881–1884",
+   "title": "A disputed origin story",
+   "text": "Local tradition holds that some Badlands horses descend from a herd taken from Sitting Bull's people at Fort Buford in 1881 and later sold to area ranches. Historians and breeders have argued over it for decades; there is no firm documentation either way.",
+   "source": "Contested",
+   "flag": true
+  },
+  {
+   "when": "1930s–1950s",
+   "title": "Horses removed from the range",
+   "text": "Ranchers and agencies clear feral horses from western North Dakota to free up grazing.",
+   "source": "Secondary"
+  },
+  {
+   "when": "1947",
+   "title": "The park is born",
+   "text": "Theodore Roosevelt National Memorial Park is established. When its boundary is fenced, a few bands are enclosed — by 1960, among the last free-roaming horses in North Dakota.",
+   "source": "NPS / Secondary"
+  },
+  {
+   "when": "1954",
+   "title": "The great roundup",
+   "text": "After fencing, a roundup removes about 200 branded animals. A few small bands evade capture and stay wild in the park.",
+   "source": "NPS"
+  },
+  {
+   "when": "1950s–1960s",
+   "title": "Attempts to remove them all",
+   "text": "The Park Service tries for years to remove every horse. The bands in the roughest country keep slipping away.",
+   "source": "NPS"
+  },
+  {
+   "when": "1970",
+   "title": "Part of the historic scene",
+   "text": "Park policy changes: horses are recognized as part of the historical setting and managed as a historic demonstration herd.",
+   "source": "NPS"
+  },
+  {
+   "when": "1971",
+   "title": "A national law that skips the park",
+   "text": "The Wild Free-Roaming Horses and Burros Act protects horses on Forest Service and Bureau of Land Management land — but not in national parks.",
+   "source": "NPS"
+  },
+  {
+   "when": "1980s–1990s",
+   "title": "Saving the bloodline outside the park",
+   "text": "Horses sold from park roundups are bought by ranchers, including brothers Leo and Frank Kuntz, who work to preserve the old Badlands type. Their work leads to the Nokota horse breed and, in 2009, the North Dakota Badlands Horse Registry for horses from the park.",
+   "source": "Secondary"
+  },
+  {
+   "when": "2022",
+   "title": "Removal on the table",
+   "text": "The Park Service opens a livestock management plan that includes options to remove the horses. Public comment pours in from across the country.",
+   "source": "NPS"
+  },
+  {
+   "when": "April 2024",
+   "title": "The horses stay",
+   "text": "On April 25, 2024, the Park Service drops the removal proposal. Horses remain part of the park.",
+   "source": "NPS / Sen. Hoeven"
+  },
+  {
+   "when": "June 2026",
+   "title": "Protection moves through Congress",
+   "text": "The bipartisan Theodore Roosevelt National Park Wild Horses Protection Act, introduced in April 2025, would require a genetically diverse herd of at least 150 horses in the South Unit. The Senate passed it in June 2026.",
+   "source": "Congress / E&E News",
+   "flag": true
+  }
+ ],
+ "bands": {
+  "title": "How a band works",
+  "points": [
+   {
+    "h": "The stallion",
+    "t": "Each band has a stallion who guards the edge of the group and drives off rivals."
+   },
+   {
+    "h": "The mares",
+    "t": "Mares and their young make up most of the band. Foals arrive in spring after an 11-month pregnancy."
+   },
+   {
+    "h": "Moving out",
+    "t": "At two or three years old, young horses leave their birth band. Colts often join bachelor groups until they can win mares of their own."
+   },
+   {
+    "h": "Bachelors",
+    "t": "A horse alone or in an all-male group is usually a young bachelor stallion trying to start a band."
+   }
+  ],
+  "names": "Advocates who follow the herd know every horse by name — band stallions such as Xander, Teton, Frontier, Remington and Trooper.",
+  "namesSource": "from the band list kept by Chasing Horses Wild Horse Advocates"
+ },
+ "coats": [
+  {
+   "name": "Blue roan",
+   "hex": "#5f6b78",
+   "note": "Black base sprinkled with white hairs; the classic Badlands look."
+  },
+  {
+   "name": "Gray",
+   "hex": "#b9bcbf",
+   "note": "Born dark, lightens with age; many older horses look nearly white."
+  },
+  {
+   "name": "Black",
+   "hex": "#1f1f22",
+   "note": "Solid black, sometimes with a white blaze."
+  },
+  {
+   "name": "Red roan",
+   "hex": "#9a6658",
+   "note": "Red-brown base with white hairs mixed through the body."
+  },
+  {
+   "name": "Bay",
+   "hex": "#7a4a2b",
+   "note": "Brown body with black mane, tail and legs."
+  },
+  {
+   "name": "Sorrel",
+   "hex": "#a4582b",
+   "note": "Copper-red all over."
+  },
+  {
+   "name": "Grulla",
+   "hex": "#7c7568",
+   "note": "Mouse-gray with a dark stripe down the back."
+  },
+  {
+   "name": "Paint / pinto",
+   "hex": "linear-gradient(90deg,#3a2a22 50%,#f3efe7 50%)",
+   "note": "Large white patches. Watch too for white 'bald' faces and dappling."
+  }
+ ],
+ "coatsSource": "Coat range from Nokota and park herd descriptions; NPS notes many park horses with bald faces and dappling.",
+ "partners": [
+  {
+   "name": "Chasing Horses Wild Horse Advocates",
+   "url": "https://chwha.org/the-horses-of-theodore-roosevelt-national-park/",
+   "note": "Tracks every band and horse in the park."
+  },
+  {
+   "name": "North Dakota Badlands Horse Registry",
+   "url": "https://americanwildhorse.org/stories/north-dakota-badlands-horse-a-new-era-of-conservation-a4902",
+   "note": "Registry for horses that came out of the park (story via American Wild Horse Conservation)."
+  },
+  {
+   "name": "Nokota Horse Conservancy",
+   "url": "https://www.nokotahorse.org/",
+   "note": "Preserves the Nokota breed descended from Badlands horses."
+  },
+  {
+   "name": "National Park Service — Horses",
+   "url": "https://www.nps.gov/thro/learn/nature/horse-history.htm",
+   "note": "The park's history of its horses."
+  }
+ ]
+}

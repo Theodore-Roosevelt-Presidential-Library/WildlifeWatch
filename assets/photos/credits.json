@@ -1,0 +1,283 @@
+{
+ "bighorn": {
+  "file": "Bighorn Sheep",
+  "source": "https://www.nps.gov/media/photo/view.htm?id=0221C45B-155D-4519-3E88-178F09523938",
+  "artist": "NPS Photo",
+  "license": "Public domain (National Park Service)",
+  "licenseUrl": "https://www.nps.gov/aboutus/disclaimer.htm",
+  "caption": "Bighorn sheep from British Columbia were reintroduced to the North Unit of Theodore Roosevelt National Park in 1996. Historically, this area was home to the now-extinct Audubon's bighorn sheep."
+ },
+ "bison": {
+  "file": "Bull Bison",
+  "source": "https://www.nps.gov/media/photo/view.htm?id=01CC3764-155D-4519-3ECC-BEBA4D28CF6C",
+  "artist": "NPS / Nathan King",
+  "license": "Public domain (National Park Service)",
+  "licenseUrl": "https://www.nps.gov/aboutus/disclaimer.htm",
+  "caption": "A bull bison walking along the South Unit's Scenic Loop Drive."
+ },
+ "bison-calf": {
+  "file": "Bison with Calf",
+  "source": "https://www.nps.gov/media/photo/view.htm?id=30E861F6-C88B-6E54-A9E0-6C5672D4DDB2",
+  "artist": "NPS Jeff Zylland",
+  "license": "Public domain (National Park Service)",
+  "licenseUrl": "https://www.nps.gov/aboutus/disclaimer.htm",
+  "caption": "Baby bison - called calves - are a distinct orange color when born. A calf will stay with its mother for up to two years."
+ },
+ "bobcat": {
+  "file": "File:Bobcat in the snow (11088238514).jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Bobcat_in_the_snow_(11088238514).jpg",
+  "artist": "U.S. Fish and Wildlife Service Headquarters",
+  "license": "Public domain",
+  "licenseUrl": ""
+ },
+ "elk": {
+  "file": "Stoic Pose",
+  "source": "https://www.nps.gov/media/photo/view.htm?id=91808D11-1DD8-B71B-0BD1-13B823DE1056",
+  "artist": "NPS/Rolan Honeyman",
+  "license": "Public domain (National Park Service)",
+  "licenseUrl": "https://www.nps.gov/aboutus/disclaimer.htm",
+  "caption": "Elk (Cervus canadensis): average of 7-8 feet in length and 510-710 pounds in weight; primarily feed on native grasses, forbs, and trees; habitat consists of prairie grasslands for eating at dusk and dawn, then treed coulees to rest in between during the day and night."
+ },
+ "coyote": {
+  "file": "Coyote",
+  "source": "https://www.nps.gov/media/photo/view.htm?id=021B67ED-155D-4519-3E70-67222C2DDCAF",
+  "artist": "NPS/Albert Myran",
+  "license": "Public domain (National Park Service)",
+  "licenseUrl": "https://www.nps.gov/aboutus/disclaimer.htm",
+  "caption": "A coyote standing in a prairie dog town."
+ },
+ "longhorn": {
+  "file": "Longhorn Steer",
+  "source": "https://www.nps.gov/media/photo/view.htm?id=022266D6-155D-4519-3E3F-6130EFB809F7",
+  "artist": "NPS / Nathan King",
+  "license": "Public domain (National Park Service)",
+  "licenseUrl": "https://www.nps.gov/aboutus/disclaimer.htm",
+  "caption": "The park maintains a small group of longhorn steers in the North Unit as a historic demonstration herd. Steers of this type were moved Texas to new ranges on the Northern Great Plains via the Long X Trail in the late 1800s."
+ },
+ "mule-deer": {
+  "file": "Mule Deer Buck",
+  "source": "https://www.nps.gov/media/photo/view.htm?id=0216FCC4-155D-4519-3EA9-C456F8D6DE0C",
+  "artist": "NPS Photo",
+  "license": "Public domain (National Park Service)",
+  "licenseUrl": "https://www.nps.gov/aboutus/disclaimer.htm",
+  "caption": "A mule deer buck in velvet."
+ },
+ "porcupine": {
+  "file": "Porcupine",
+  "source": "https://www.nps.gov/media/photo/view.htm?id=021D33DB-155D-4519-3E65-4B393B27D851",
+  "artist": "NPS Photo",
+  "license": "Public domain (National Park Service)",
+  "licenseUrl": "https://www.nps.gov/aboutus/disclaimer.htm",
+  "caption": "If you are lucky, you might spot a porcupine sitting in a cottonwood tree or ambling along the ground."
+ },
+ "prairie-dog": {
+  "file": "Who's There?",
+  "source": "https://www.nps.gov/media/photo/view.htm?id=92C7A62E-1DD8-B71B-0B95-9818A2AEEA3D",
+  "artist": "NPS/Jeff Zylland",
+  "license": "Public domain (National Park Service)",
+  "licenseUrl": "https://www.nps.gov/aboutus/disclaimer.htm",
+  "caption": "Black-tailed Prairie Dog (Cynomys ludovicianus): average of 11-4 inches in length and 1-3 pound in weight; primarily feed on plants; habitat consists of open plains where they will colonize in group to create a \"town.\""
+ },
+ "prairie-dog-town": {
+  "file": "File:Prairie dog town Theodore Roosevelt National Park ND1.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Prairie_dog_town_Theodore_Roosevelt_National_Park_ND1.jpg",
+  "artist": "Acroterion",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ },
+ "pronghorn": {
+  "file": "Pronghorn",
+  "source": "https://www.nps.gov/media/photo/view.htm?id=021C1CD9-155D-4519-3EF4-47E3ED141EA1",
+  "artist": "NPS Photo",
+  "license": "Public domain (National Park Service)",
+  "licenseUrl": "https://www.nps.gov/aboutus/disclaimer.htm",
+  "caption": "The North American Pronghorn is the fastest land animal over a long distance."
+ },
+ "badger": {
+  "file": "American Badger",
+  "source": "https://www.nps.gov/media/photo/view.htm?id=02157935-155D-4519-3E02-8F38204E4DE3",
+  "artist": "NPS/Lyle K. Glass",
+  "license": "Public domain (National Park Service)",
+  "licenseUrl": "https://www.nps.gov/aboutus/disclaimer.htm",
+  "caption": "Badgers are one of the prairie dog's many predators, aggressively digging into their prey's den."
+ },
+ "white-tailed-deer": {
+  "file": "File:White-tailed Deer Doe White Horse Hill National Game Preserve (53203385186).jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:White-tailed_Deer_Doe_White_Horse_Hill_National_Game_Preserve_(53203385186).jpg",
+  "artist": "USFWS Mountain Prairie",
+  "license": "Public domain",
+  "licenseUrl": ""
+ },
+ "horse-3": {
+  "file": "Young Horses",
+  "source": "https://www.nps.gov/media/photo/view.htm?id=01E70B6B-155D-4519-3EC7-816EA1C07E4E",
+  "artist": "NPS Photo",
+  "license": "Public domain (National Park Service)",
+  "licenseUrl": "https://www.nps.gov/aboutus/disclaimer.htm",
+  "caption": "Young horses will stay with their natal herd until they are two or three years old. This group of horses consists of a yearling foal and newborn foal with their mother."
+ },
+ "horse": {
+  "file": "Array of Grey",
+  "source": "https://www.nps.gov/media/photo/view.htm?id=96E8C972-1DD8-B71B-0B3F-AB541405504F",
+  "artist": "NPS/Alexandria Shankweile",
+  "license": "Public domain (National Park Service)",
+  "licenseUrl": "https://www.nps.gov/aboutus/disclaimer.htm",
+  "caption": "Feral Horse (Equus caballus): once domesticated, these horses have been living in the wild since the late 1800's. Inadvertently fencing them in when TRNP became established, the Park Service maintains the horses in their natural, feral state."
+ },
+ "horse-6": {
+  "file": "Horses in Winter",
+  "source": "https://www.nps.gov/media/photo/view.htm?id=01E4A04E-155D-4519-3E4B-F3EFBEFB7AC6",
+  "artist": "NPS Photo",
+  "license": "Public domain (National Park Service)",
+  "licenseUrl": "https://www.nps.gov/aboutus/disclaimer.htm",
+  "caption": "The feral horses have a thick coat to protect against the cold winter wind."
+ },
+ "horse-4": {
+  "file": "Color Characteristics",
+  "source": "https://www.nps.gov/media/photo/view.htm?id=01E5E72F-155D-4519-3EB2-3AB8F0643453",
+  "artist": "NPS Photo",
+  "license": "Public domain (National Park Service)",
+  "licenseUrl": "https://www.nps.gov/aboutus/disclaimer.htm",
+  "caption": "Wild horses in Theodore Roosevelt National Park show some interesting color characteristics, including many with a white or \"bald\" face and spots or \"dappling\"."
+ },
+ "horse-5": {
+  "file": "Bachelor Stallion",
+  "source": "https://www.nps.gov/media/photo/view.htm?id=01E32674-155D-4519-3E80-3CE4C05C5E71",
+  "artist": "NPS Photo",
+  "license": "Public domain (National Park Service)",
+  "licenseUrl": "https://www.nps.gov/aboutus/disclaimer.htm",
+  "caption": "Solitary horses tend to be bachelor stallions that are trying to form a herd of their own."
+ },
+ "horse-2": {
+  "file": "Young foal with herd",
+  "source": "https://www.nps.gov/media/photo/view.htm?id=01E924CD-155D-4519-3EB3-C90E46A1ADA9",
+  "artist": "NPS Photo",
+  "license": "Public domain (National Park Service)",
+  "licenseUrl": "https://www.nps.gov/aboutus/disclaimer.htm",
+  "caption": "Wild (Feral) Horses in the South Unit of Theodore Roosevelt National Park."
+ },
+ "beaver": {
+  "file": "File:Beaver - Castor canadensis (51361587496).jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Beaver_-_Castor_canadensis_(51361587496).jpg",
+  "artist": "GlacierNPS",
+  "license": "Public domain",
+  "licenseUrl": ""
+ },
+ "magpie": {
+  "file": "Black-Biled Magpie",
+  "source": "https://www.nps.gov/media/photo/view.htm?id=F3B64FE3-EA07-1418-7139-EEAE04CA2A97",
+  "artist": "NPS Photo",
+  "license": "Public domain (National Park Service)",
+  "licenseUrl": "https://www.nps.gov/aboutus/disclaimer.htm",
+  "caption": "Black-Biled Magpie"
+ },
+ "burrowing-owl": {
+  "file": "File:Burrowing Owl Portrait (6777953881).jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Burrowing_Owl_Portrait_(6777953881).jpg",
+  "artist": "Andy Morffew from Itchen Abbas, Hampshire, UK",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+ },
+ "rattlesnake": {
+  "file": "Coiled Rattlesnake",
+  "source": "https://www.nps.gov/media/photo/view.htm?id=3161CFF5-0955-FA0F-153E-609A7111285F",
+  "artist": "NPS",
+  "license": "Public domain (National Park Service)",
+  "licenseUrl": "https://www.nps.gov/aboutus/disclaimer.htm",
+  "caption": "Prairie rattlesnakes do their best to avoid humans. If they feel threatened they might coil into an S-shape and rattle their tails."
+ },
+ "golden-eagle": {
+  "file": "File:Golden Eagle (Aquila chrysaetos) (31814073408).jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Golden_Eagle_(Aquila_chrysaetos)_(31814073408).jpg",
+  "artist": "GlacierNPS",
+  "license": "Public domain",
+  "licenseUrl": ""
+ },
+ "sharp-tailed-grouse": {
+  "file": "File:Sharp-Tailed Grouse (26089894256) (cropped).jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Sharp-Tailed_Grouse_(26089894256)_(cropped).jpg",
+  "artist": "USFWS Mountain-Prairie",
+  "license": "Public domain",
+  "licenseUrl": ""
+ },
+ "meadowlark": {
+  "file": "Western Meadowlark",
+  "source": "https://www.nps.gov/media/photo/view.htm?id=92DB1B46-87DB-4AB7-8B5D-44E7F0212B1B",
+  "artist": "NPS Photo/Albert Myran",
+  "license": "Public domain (National Park Service)",
+  "licenseUrl": "https://www.nps.gov/aboutus/disclaimer.htm",
+  "caption": "The western meadowlark is the state bird of North Dakota."
+ },
+ "wild-turkey": {
+  "file": "Wild Turkey",
+  "source": "https://www.nps.gov/media/photo/view.htm?id=30FFD54F-4E3F-446E-A706-ADC46B956B75",
+  "artist": "NPS Photo/Albert Myran",
+  "license": "Public domain (National Park Service)",
+  "licenseUrl": "https://www.nps.gov/aboutus/disclaimer.htm",
+  "caption": "Wild turkeys are a common sight in Theodore Roosevelt National Park"
+ },
+ "bison-2": {
+  "file": "Bison Crossing The River",
+  "source": "https://www.nps.gov/media/photo/view.htm?id=519EB715-EE26-40A0-BA21-B84AE3E59D63",
+  "artist": "NPS Photo/Janice Shanks",
+  "license": "Public domain (National Park Service)",
+  "licenseUrl": "https://www.nps.gov/aboutus/disclaimer.htm",
+  "caption": "A herd of bison crosses the Little Missouri river."
+ },
+ "bison-3": {
+  "file": "Bull Bison Rolling",
+  "source": "https://www.nps.gov/media/photo/view.htm?id=F97C20F4-2B51-45C1-81E7-1A34A00106E7",
+  "artist": "NPS Photo/Melanie Stewart-Clarke",
+  "license": "Public domain (National Park Service)",
+  "licenseUrl": "https://www.nps.gov/aboutus/disclaimer.htm",
+  "caption": "A bull bison raises a dust cloud by rolling in a wallow."
+ },
+ "bison-4": {
+  "file": "Young Bison Calf",
+  "source": "https://www.nps.gov/media/photo/view.htm?id=01CE1306-155D-4519-3EDC-6CE83A5841AA",
+  "artist": "NPS / Nathan King",
+  "license": "Public domain (National Park Service)",
+  "licenseUrl": "https://www.nps.gov/aboutus/disclaimer.htm",
+  "caption": "Calves are orange in color when they are born. They typically turn brown by their first winter."
+ },
+ "horse-7": {
+  "file": "Horses Fighting",
+  "source": "https://www.nps.gov/media/photo/view.htm?id=01EB3D3D-155D-4519-3E3D-8FE69EC3A92B",
+  "artist": "NPS Photo",
+  "license": "Public domain (National Park Service)",
+  "licenseUrl": "https://www.nps.gov/aboutus/disclaimer.htm",
+  "caption": "Feral Horses in the South Unit of Theodore Roosevelt National Park."
+ },
+ "horse-8": {
+  "file": "Horses",
+  "source": "https://www.nps.gov/media/photo/view.htm?id=01E8325F-155D-4519-3E92-B7EC625F1129",
+  "artist": "NPS Photo",
+  "license": "Public domain (National Park Service)",
+  "licenseUrl": "https://www.nps.gov/aboutus/disclaimer.htm",
+  "caption": "Wild horses in the South Unit of Theodore Roosevelt National Park."
+ },
+ "elk-2": {
+  "file": "Fall Harem",
+  "source": "https://www.nps.gov/media/photo/view.htm?id=93E5771F-1DD8-B71B-0BA4-2A925065ADC2",
+  "artist": "NPS/Rolan Honeyman",
+  "license": "Public domain (National Park Service)",
+  "licenseUrl": "https://www.nps.gov/aboutus/disclaimer.htm",
+  "caption": "Elk (Cervus canadensis): until the mating season, where males vie to protect as many females as they can (gathering their harem), male and female adult elk keeps themselves apart."
+ },
+ "prairie-dog-2": {
+  "file": "Prairie Dog Kiss",
+  "source": "https://www.nps.gov/media/photo/view.htm?id=314992EA-AD15-0D06-A3D1-E65B5A351825",
+  "artist": "NPS",
+  "license": "Public domain (National Park Service)",
+  "licenseUrl": "https://www.nps.gov/aboutus/disclaimer.htm",
+  "caption": "Prairie dogs live in close family groups. They greet family members by touching noses or mouths, kind of like a kiss!"
+ },
+ "great-horned-owl": {
+  "file": "Great Horned Owlets",
+  "source": "https://www.nps.gov/media/photo/view.htm?id=01AB8A44-155D-4519-3E06-FF1BE10B103F",
+  "artist": "NPS",
+  "license": "Public domain (National Park Service)",
+  "licenseUrl": "https://www.nps.gov/aboutus/disclaimer.htm",
+  "caption": "Baby owls are called owlets. These great horned owlets are perched in a tree waiting for mom to bring back a snack."
+ }
+}
