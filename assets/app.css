@@ -106,13 +106,13 @@ section.panel[hidden] { display: none; }
 /* ---- Detail pop-up (centered dialog) ---- */
 .drawer { position: fixed; inset: 0; z-index: 2000; display: none; }
 .drawer.open { display: block; }
-.drawer .scrim { position: absolute; inset: 0; background: rgba(15,20,17,.62); animation: wwFade .18s ease-out; }
+.drawer .scrim { position: absolute; inset: 0; background: rgba(251,250,246,.86); -webkit-backdrop-filter: blur(3px); backdrop-filter: blur(3px); animation: wwFade .18s ease-out; }
 .drawer .stage { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding: 24px 16px; pointer-events: none; }
-.drawer .sheet { pointer-events: auto; position: relative; width: min(940px, 100%); max-height: 100%; overflow-y: auto; overscroll-behavior: contain; background: var(--paper); border-radius: 14px; box-shadow: 0 24px 70px rgba(0,0,0,.35); animation: wwPop .2s ease-out; }
-.drawer .bar { position: sticky; top: 0; z-index: 3; display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 10px 12px; pointer-events: none; height: 0; overflow: visible; }
+.drawer .sheet { pointer-events: auto; position: relative; width: min(940px, 100%); max-height: 100%; overflow-y: auto; overscroll-behavior: contain; background: var(--paper); border-radius: 14px; border: 1px solid var(--line); box-shadow: 0 2px 6px rgba(22,55,40,.08), 0 24px 60px rgba(22,55,40,.18); animation: wwPop .2s ease-out; }
+.drawer .bar { position: sticky; top: 0; z-index: 3; display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; padding: 0 12px; pointer-events: none; height: 0; overflow: visible; }
 .drawer .bar > * { pointer-events: auto; }
-.drawer .nav { display: flex; gap: 6px; margin-top: 44px; }
-.drawer .close, .drawer .nav button { width: 40px; height: 40px; border-radius: 50%; border: 0; background: rgba(255,255,255,.95); font-size: 22px; line-height: 1; box-shadow: 0 2px 10px rgba(0,0,0,.2); color: var(--forest-dark); margin-top: 44px; }
+.drawer .nav { display: flex; gap: 6px; margin-top: 12px; }
+.drawer .close, .drawer .nav button { width: 40px; height: 40px; border-radius: 50%; border: 0; background: rgba(255,255,255,.95); font-size: 22px; line-height: 1; box-shadow: 0 2px 10px rgba(0,0,0,.2); color: var(--forest-dark); margin-top: 12px; }
 .drawer .nav button { margin-top: 0; font-size: 18px; }
 .drawer .close:hover, .drawer .nav button:hover { background: #fff; color: var(--orange-dark); }
 .drawer .big { aspect-ratio: 16/8; background: var(--sand) center/cover; border-radius: 14px 14px 0 0; }
