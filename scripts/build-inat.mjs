@@ -16,7 +16,7 @@ const DELAY_DAYS = 2;      // hold back the most recent reports
 const WINDOW_DAYS = 45;    // how far back "recent" looks
 const GRID = 0.01;         // hotspot cell size in degrees (~1 km)
 const MIN_CELL = 2;        // drop cells with a single report
-const API = "https://api.inaturalist.org/v1";
+const API = process.env.INAT_API || "https://api.inaturalist.org/v1";
 const UA = "TRPL-WildlifeWatch/1.0 (wildlife.labs.trlibrary.com)";
 
 const root = new URL("..", import.meta.url);
@@ -24,15 +24,37 @@ const species = JSON.parse(await readFile(new URL("data/species.json", root)));
 const zones = JSON.parse(await readFile(new URL("data/zones.json", root)));
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+// iNaturalist occasionally drops a connection, times out or answers 429/5xx.
+// Retry with backoff instead of letting one hiccup fail the whole run.
 async function get(path, params) {
   const url = `${API}${path}?${new URLSearchParams(params)}`;
-  for (let attempt = 0; attempt < 4; attempt++) {
-    const res = await fetch(url, { headers: { "User-Agent": UA, Accept: "application/json" } });
-    if (res.ok) { await sleep(1100); return res.json(); }
-    await sleep(3000 * (attempt + 1));
+  let lastErr;
+  for (let attempt = 0; attempt < 5; attempt++) {
+    try {
+      const res = await fetch(url, {
+        headers: { "User-Agent": UA, Accept: "application/json" },
+        signal: AbortSignal.timeout(30000),
+      });
+      if (res.ok) {
+        const data = await res.json();
+        await sleep(1100); // stay under iNaturalist's ~1 request/second guidance
+        return data;
+      }
+      lastErr = new Error(`HTTP ${res.status}`);
+      const retryAfter = Number(res.headers.get("retry-after"));
+      await sleep(retryAfter > 0 ? retryAfter * 1000 : 2000 * 2 ** attempt);
+    } catch (err) {
+      lastErr = err;
+      await sleep(2000 * 2 ** attempt);
+    }
   }
-  throw new Error(`Failed: ${url}`);
+  throw new Error(`${lastErr?.message || lastErr} — ${url}`);
 }
+
+// Last good data, used to fill in anything that can't be fetched this run.
+let previous = { species: {}, effort: [] };
+try { previous = JSON.parse(await readFile(new URL("data/inat.json", root))); } catch {}
 
 const iso = (d) => d.toISOString().slice(0, 10);
 const now = new Date();
@@ -66,16 +88,23 @@ const out = {
 // Dividing a species' monthly reports by this corrects for the summer crowd —
 // a species that "shows up" in July only because more people are visiting
 // will not look like a July specialty.
-{
+const failed = [];
+try {
   const all = await get("/observations/histogram", {
     place_id: PLACE_ID, verifiable: "true", date_field: "observed", interval: "month_of_year",
   });
   const mo = all.results.month_of_year || {};
   out.effort = Array.from({ length: 12 }, (_, i) => mo[i + 1] || 0);
+} catch (err) {
+  console.warn(`\n! effort baseline: ${err.message} (keeping previous)`);
+  out.effort = previous.effort || [];
+  failed.push("effort");
 }
 
+let streak = 0;
 for (const s of species) {
   if (!s.inat) continue;
+  try {
   const base = { place_id: PLACE_ID, taxon_id: s.inat, verifiable: "true" };
   process.stdout.write(`${s.key} `);
 
@@ -137,7 +166,25 @@ for (const s of species) {
     units: unitCounts,
     recent: { count: used, zones: Object.values(byZone).sort((a, b) => (a.last < b.last ? 1 : -1)) },
   };
+  streak = 0;
+  } catch (err) {
+    console.warn(`\n! ${s.key}: ${err.message} (keeping previous)`);
+    failed.push(s.key);
+    if (++streak >= 3) {
+      // Three animals in a row failed after retries: the service is down, not flaky.
+      console.error(`\niNaturalist looks unavailable; leaving data/inat.json unchanged.`);
+      process.exit(1);
+    }
+    continue;
+    if (previous.species?.[s.key]) out.species[s.key] = { ...previous.species[s.key], stale: true };
+  }
 }
 
+const total = species.filter((s) => s.inat).length;
+if (failed.filter((k) => k !== "effort").length === total) {
+  console.error(`\niNaturalist unreachable for every species; leaving data/inat.json unchanged.`);
+  process.exit(1);
+}
+out.failed = failed;
 await writeFile(new URL("data/inat.json", root), JSON.stringify(out, null, 1));
-console.log(`\nWrote data/inat.json (${Object.keys(out.species).length} species)`);
+console.log(`\nWrote data/inat.json (${Object.keys(out.species).length} species${failed.length ? `; kept previous data for: ${failed.join(", ")}` : ""})`);
