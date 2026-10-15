@@ -1,9 +1,9 @@
 {
- "generated": "2026-10-14T11:27:23.584Z",
+ "generated": "2026-10-15T11:25:48.363Z",
  "source": "iNaturalist community observations, Theodore Roosevelt National Park (place 72793)",
  "window": {
-  "from": "2026-08-30",
-  "to": "2026-10-12",
+  "from": "2026-08-31",
+  "to": "2026-10-13",
   "delayDays": 2
  },
  "species": {
@@ -3139,7 +3139,7 @@
   5234,
   3749,
   2516,
-  552,
+  553,
   179,
   107
  ],
