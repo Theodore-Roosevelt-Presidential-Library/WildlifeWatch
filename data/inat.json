@@ -1,9 +1,9 @@
 {
- "generated": "2026-10-17T11:23:11.433Z",
+ "generated": "2026-10-18T11:22:50.973Z",
  "source": "iNaturalist community observations, Theodore Roosevelt National Park (place 72793)",
  "window": {
-  "from": "2026-09-02",
-  "to": "2026-10-15",
+  "from": "2026-09-03",
+  "to": "2026-10-16",
   "delayDays": 2
  },
  "species": {
@@ -616,7 +616,7 @@
     "north": 269
    },
    "recent": {
-    "count": 21,
+    "count": 17,
     "zones": [
      {
       "zone": "n-oxbow",
@@ -630,12 +630,12 @@
      },
      {
       "zone": "s-windcanyon",
-      "count": 3,
+      "count": 2,
       "last": "2026-10-09"
      },
      {
       "zone": "s-cottonwood",
-      "count": 2,
+      "count": 1,
       "last": "2026-10-09"
      },
      {
@@ -650,18 +650,13 @@
      },
      {
       "zone": "s-painted",
-      "count": 4,
+      "count": 3,
       "last": "2026-09-16"
      },
      {
       "zone": "s-paddock",
       "count": 1,
       "last": "2026-09-06"
-     },
-     {
-      "zone": "s-scoria",
-      "count": 1,
-      "last": "2026-09-02"
      }
     ]
    }
@@ -1025,7 +1020,7 @@
     "north": 3
    },
    "recent": {
-    "count": 7,
+    "count": 6,
     "zones": [
      {
       "zone": "s-entrance",
@@ -1041,11 +1036,6 @@
       "zone": "s-cottonwood",
       "count": 2,
       "last": "2026-09-04"
-     },
-     {
-      "zone": "s-boicourt",
-      "count": 1,
-      "last": "2026-09-02"
      }
     ]
    }
@@ -2029,11 +2019,11 @@
     "north": 59
    },
    "recent": {
-    "count": 16,
+    "count": 13,
     "zones": [
      {
       "zone": "s-cottonwood",
-      "count": 8,
+      "count": 5,
       "last": "2026-10-09"
      },
      {
@@ -3133,7 +3123,7 @@
   5228,
   3750,
   2516,
-  554,
+  555,
   179,
   107
  ],
