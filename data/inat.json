@@ -1,9 +1,9 @@
 {
- "generated": "2026-10-21T11:26:51.205Z",
+ "generated": "2026-10-22T11:26:39.201Z",
  "source": "iNaturalist community observations, Theodore Roosevelt National Park (place 72793)",
  "window": {
-  "from": "2026-09-06",
-  "to": "2026-10-19",
+  "from": "2026-09-07",
+  "to": "2026-10-20",
   "delayDays": 2
  },
  "species": {
@@ -616,7 +616,7 @@
     "north": 269
    },
    "recent": {
-    "count": 14,
+    "count": 13,
     "zones": [
      {
       "zone": "s-cottonwood",
@@ -652,11 +652,6 @@
       "zone": "s-painted",
       "count": 2,
       "last": "2026-09-16"
-     },
-     {
-      "zone": "s-paddock",
-      "count": 1,
-      "last": "2026-09-06"
      }
     ]
    }
@@ -1020,7 +1015,7 @@
     "north": 3
    },
    "recent": {
-    "count": 4,
+    "count": 3,
     "zones": [
      {
       "zone": "s-entrance",
@@ -1029,7 +1024,7 @@
      },
      {
       "zone": "s-buckhill",
-      "count": 3,
+      "count": 2,
       "last": "2026-09-18"
      }
     ]
@@ -1430,7 +1425,7 @@
     "north": 44
    },
    "recent": {
-    "count": 7,
+    "count": 6,
     "zones": [
      {
       "zone": "s-buckhill",
@@ -1456,11 +1451,6 @@
       "zone": "s-paddock",
       "count": 1,
       "last": "2026-09-12"
-     },
-     {
-      "zone": "n-riverbend",
-      "count": 1,
-      "last": "2026-09-06"
      }
     ]
    }
@@ -2008,7 +1998,7 @@
     "north": 59
    },
    "recent": {
-    "count": 12,
+    "count": 11,
     "zones": [
      {
       "zone": "s-cottonwood",
@@ -2024,11 +2014,6 @@
       "zone": "s-windcanyon",
       "count": 1,
       "last": "2026-09-18"
-     },
-     {
-      "zone": "s-painted",
-      "count": 1,
-      "last": "2026-09-06"
      }
     ]
    }
@@ -2147,17 +2132,12 @@
     "north": 8
    },
    "recent": {
-    "count": 2,
+    "count": 1,
     "zones": [
      {
       "zone": "s-entrance",
       "count": 1,
       "last": "2026-09-20"
-     },
-     {
-      "zone": "s-windcanyon",
-      "count": 1,
-      "last": "2026-09-06"
      }
     ]
    }
