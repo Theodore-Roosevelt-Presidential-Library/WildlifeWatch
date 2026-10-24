@@ -1,9 +1,9 @@
 {
- "generated": "2026-10-23T11:27:09.960Z",
+ "generated": "2026-10-24T11:23:10.196Z",
  "source": "iNaturalist community observations, Theodore Roosevelt National Park (place 72793)",
  "window": {
-  "from": "2026-09-08",
-  "to": "2026-10-21",
+  "from": "2026-09-09",
+  "to": "2026-10-22",
   "delayDays": 2
  },
  "species": {
@@ -1709,7 +1709,7 @@
     [
      46.95,
      -103.51,
-     89
+     90
     ],
     [
      46.92,
@@ -1952,7 +1952,7 @@
      2
     ]
    ],
-   "total": 817,
+   "total": 818,
    "month": [
     1,
     0,
@@ -1963,7 +1963,7 @@
     272,
     140,
     112,
-    26,
+    27,
     10,
     6
    ],
@@ -1994,16 +1994,16 @@
     0
    ],
    "units": {
-    "south": 758,
+    "south": 759,
     "north": 59
    },
    "recent": {
-    "count": 11,
+    "count": 12,
     "zones": [
      {
       "zone": "s-cottonwood",
-      "count": 6,
-      "last": "2026-10-16"
+      "count": 7,
+      "last": "2026-10-22"
      },
      {
       "zone": "s-entrance",
@@ -2073,7 +2073,7 @@
     [
      46.95,
      -103.52,
-     3
+     4
     ],
     [
      46.95,
@@ -2086,7 +2086,7 @@
      2
     ]
    ],
-   "total": 92,
+   "total": 93,
    "month": [
     0,
     1,
@@ -2097,7 +2097,7 @@
     20,
     12,
     17,
-    8,
+    9,
     5,
     2
    ],
@@ -2128,12 +2128,17 @@
     0
    ],
    "units": {
-    "south": 84,
+    "south": 85,
     "north": 8
    },
    "recent": {
-    "count": 1,
+    "count": 2,
     "zones": [
+     {
+      "zone": "s-cottonwood",
+      "count": 1,
+      "last": "2026-10-22"
+     },
      {
       "zone": "s-entrance",
       "count": 1,
@@ -3092,7 +3097,7 @@
   5228,
   3750,
   2516,
-  587,
+  599,
   179,
   107
  ],
