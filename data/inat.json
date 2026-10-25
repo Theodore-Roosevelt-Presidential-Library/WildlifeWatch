@@ -1,9 +1,9 @@
 {
- "generated": "2026-10-24T11:23:10.196Z",
+ "generated": "2026-10-25T11:23:27.667Z",
  "source": "iNaturalist community observations, Theodore Roosevelt National Park (place 72793)",
  "window": {
-  "from": "2026-09-09",
-  "to": "2026-10-22",
+  "from": "2026-09-10",
+  "to": "2026-10-23",
   "delayDays": 2
  },
  "species": {
@@ -616,7 +616,7 @@
     "north": 269
    },
    "recent": {
-    "count": 13,
+    "count": 12,
     "zones": [
      {
       "zone": "s-cottonwood",
@@ -640,7 +640,7 @@
      },
      {
       "zone": "s-boicourt",
-      "count": 2,
+      "count": 1,
       "last": "2026-09-21"
      },
      {
@@ -1998,7 +1998,7 @@
     "north": 59
    },
    "recent": {
-    "count": 12,
+    "count": 11,
     "zones": [
      {
       "zone": "s-cottonwood",
@@ -2007,7 +2007,7 @@
      },
      {
       "zone": "s-entrance",
-      "count": 4,
+      "count": 3,
       "last": "2026-09-28"
      },
      {
