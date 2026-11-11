@@ -1,9 +1,9 @@
 {
- "generated": "2026-11-10T11:19:26.987Z",
+ "generated": "2026-11-11T11:19:40.187Z",
  "source": "iNaturalist community observations, Theodore Roosevelt National Park (place 72793)",
  "window": {
-  "from": "2026-09-26",
-  "to": "2026-11-08",
+  "from": "2026-09-27",
+  "to": "2026-11-09",
   "delayDays": 2
  },
  "species": {
@@ -2380,14 +2380,8 @@
     "north": 2
    },
    "recent": {
-    "count": 1,
-    "zones": [
-     {
-      "zone": "n-juniper",
-      "count": 1,
-      "last": "2026-09-26"
-     }
-    ]
+    "count": 0,
+    "zones": []
    }
   },
   "sharp-tailed-grouse": {
@@ -3028,7 +3022,7 @@
   5569,
   5235,
   3758,
-  2516,
+  2521,
   615,
   180,
   107
