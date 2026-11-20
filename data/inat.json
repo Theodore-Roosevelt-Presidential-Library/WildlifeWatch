@@ -1,9 +1,9 @@
 {
- "generated": "2026-11-19T11:19:06.183Z",
+ "generated": "2026-11-20T11:19:29.441Z",
  "source": "iNaturalist community observations, Theodore Roosevelt National Park (place 72793)",
  "window": {
-  "from": "2026-10-05",
-  "to": "2026-11-17",
+  "from": "2026-10-06",
+  "to": "2026-11-18",
   "delayDays": 2
  },
  "species": {
@@ -1000,8 +1000,13 @@
     "north": 4
    },
    "recent": {
-    "count": 1,
+    "count": 2,
     "zones": [
+     {
+      "zone": "s-paddock",
+      "count": 1,
+      "last": "2026-11-18"
+     },
      {
       "zone": "n-juniper",
       "count": 1,
@@ -1784,7 +1789,7 @@
     [
      46.95,
      -103.53,
-     2
+     3
     ],
     [
      46.95,
@@ -1917,7 +1922,7 @@
      2
     ]
    ],
-   "total": 827,
+   "total": 828,
    "month": [
     1,
     0,
@@ -1929,7 +1934,7 @@
     141,
     119,
     27,
-    10,
+    11,
     6
    ],
    "hour": [
@@ -1959,7 +1964,7 @@
     0
    ],
    "units": {
-    "south": 768,
+    "south": 769,
     "north": 59
    },
    "recent": {
@@ -3036,12 +3041,12 @@
   91,
   297,
   1902,
-  5570,
+  5571,
   5235,
   3758,
   2531,
   616,
-  185,
+  193,
   107
  ],
  "failed": []
