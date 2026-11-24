@@ -1,9 +1,9 @@
 {
- "generated": "2026-11-23T11:19:13.337Z",
+ "generated": "2026-11-24T11:19:27.669Z",
  "source": "iNaturalist community observations, Theodore Roosevelt National Park (place 72793)",
  "window": {
-  "from": "2026-10-09",
-  "to": "2026-11-21",
+  "from": "2026-10-10",
+  "to": "2026-11-22",
   "delayDays": 2
  },
  "species": {
@@ -535,6 +535,11 @@
      2
     ],
     [
+     47.62,
+     -103.38,
+     2
+    ],
+    [
      46.93,
      -103.47,
      4
@@ -570,7 +575,7 @@
      2
     ]
    ],
-   "total": 1107,
+   "total": 1108,
    "month": [
     10,
     2,
@@ -580,7 +585,7 @@
     216,
     277,
     219,
-    133,
+    134,
     43,
     25,
     12
@@ -613,10 +618,10 @@
    ],
    "units": {
     "south": 837,
-    "north": 270
+    "north": 271
    },
    "recent": {
-    "count": 6,
+    "count": 4,
     "zones": [
      {
       "zone": "s-buckhill",
@@ -625,7 +630,7 @@
      },
      {
       "zone": "s-cottonwood",
-      "count": 2,
+      "count": 1,
       "last": "2026-10-16"
      },
      {
@@ -637,11 +642,6 @@
       "zone": "n-juniper",
       "count": 1,
       "last": "2026-10-10"
-     },
-     {
-      "zone": "s-windcanyon",
-      "count": 1,
-      "last": "2026-10-09"
      }
     ]
    }
@@ -806,7 +806,7 @@
     [
      46.98,
      -103.45,
-     6
+     7
     ],
     [
      46.99,
@@ -959,7 +959,7 @@
      4
     ]
    ],
-   "total": 345,
+   "total": 346,
    "month": [
     2,
     0,
@@ -969,7 +969,7 @@
     67,
     91,
     65,
-    51,
+    52,
     9,
     7,
     1
@@ -1001,7 +1001,7 @@
     0
    ],
    "units": {
-    "south": 341,
+    "south": 342,
     "north": 4
    },
    "recent": {
@@ -1425,14 +1425,8 @@
     "north": 44
    },
    "recent": {
-    "count": 1,
-    "zones": [
-     {
-      "zone": "s-buckhill",
-      "count": 1,
-      "last": "2026-10-09"
-     }
-    ]
+    "count": 0,
+    "zones": []
    }
   },
   "white-tailed-deer": {
@@ -1983,11 +1977,11 @@
     "north": 59
    },
    "recent": {
-    "count": 5,
+    "count": 3,
     "zones": [
      {
       "zone": "s-cottonwood",
-      "count": 5,
+      "count": 3,
       "last": "2026-11-19"
      }
     ]
@@ -2618,14 +2612,8 @@
     "north": 28
    },
    "recent": {
-    "count": 1,
-    "zones": [
-     {
-      "zone": "s-cottonwood",
-      "count": 1,
-      "last": "2026-10-09"
-     }
-    ]
+    "count": 0,
+    "zones": []
    }
   },
   "burrowing-owl": {
@@ -3062,10 +3050,10 @@
   91,
   297,
   1902,
-  5571,
+  5572,
   5235,
   3758,
-  2531,
+  2533,
   617,
   200,
   109
