@@ -1,9 +1,9 @@
 {
- "generated": "2026-11-24T11:19:27.669Z",
+ "generated": "2026-11-25T11:19:16.969Z",
  "source": "iNaturalist community observations, Theodore Roosevelt National Park (place 72793)",
  "window": {
-  "from": "2026-10-10",
-  "to": "2026-11-22",
+  "from": "2026-10-11",
+  "to": "2026-11-23",
   "delayDays": 2
  },
  "species": {
@@ -621,7 +621,7 @@
     "north": 271
    },
    "recent": {
-    "count": 4,
+    "count": 2,
     "zones": [
      {
       "zone": "s-buckhill",
@@ -632,16 +632,6 @@
       "zone": "s-cottonwood",
       "count": 1,
       "last": "2026-10-16"
-     },
-     {
-      "zone": "n-oxbow",
-      "count": 1,
-      "last": "2026-10-10"
-     },
-     {
-      "zone": "n-juniper",
-      "count": 1,
-      "last": "2026-10-10"
      }
     ]
    }
@@ -2478,14 +2468,8 @@
     "north": 7
    },
    "recent": {
-    "count": 1,
-    "zones": [
-     {
-      "zone": "s-cottonwood",
-      "count": 1,
-      "last": "2026-10-10"
-     }
-    ]
+    "count": 0,
+    "zones": []
    }
   },
   "wild-turkey": {
